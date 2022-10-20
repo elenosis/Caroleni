@@ -18,14 +18,13 @@ const Weather = () => {
 
         setWeather({ temperatur, city, country, feelsLike, description });
       });
-  });
+  }, []);
   return (
     <div className="weatherCard">
       <p>
         The wetaher in {weather.city} today is {weather.description}.
       </p>
       <p>
-        {" "}
         The actual temperatur is {weather.temperatur}°C but it feels like{" "}
         {weather.feelsLike}°C
       </p>
