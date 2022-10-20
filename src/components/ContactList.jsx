@@ -11,7 +11,6 @@ const ContactList = () => {
           <ul>
             <li></li>
           </ul>
-          Contact
         </div>
       </div>
       <Footer />

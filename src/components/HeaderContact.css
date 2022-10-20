@@ -1,11 +1,12 @@
 .headerContact {
-  text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  text-align: center;
   border: 2px solid red;
 }
 
 .contactBack {
   margin: 1rem;
   border: 2px solid green;
+  border-radius: 0.5rem;
 }
