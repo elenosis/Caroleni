@@ -10,6 +10,7 @@ import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Header from "./components/Header";
 import Quote from "./components/Quote";
+import { Routes, Route, Link } from "react-router-dom";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
