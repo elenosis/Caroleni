@@ -1,4 +1,3 @@
-import "./App.css";
 import { Calendar } from "react-big-calendar";
 import { dateFnsLocalizer } from "react-big-calendar";
 import format from "date-fns/format";
@@ -10,9 +9,8 @@ import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import HeaderMain from "./components/HeaderMain";
 import Quote from "./components/Quote";
-import { Routes, Route, Link } from "react-router-dom";
+
 import "react-datepicker/dist/react-datepicker.css";
-import Start from "./components/Start";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -89,7 +87,6 @@ const Main = () => {
         endAccessor="end"
         style={{ height: 400, width: "70vw", margin: "50px" }}
       />
-      <Start />
     </div>
   );
 };

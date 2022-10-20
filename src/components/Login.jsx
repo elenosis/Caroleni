@@ -22,8 +22,7 @@ const Login = () => {
     setInputCity("");
 
     if (data.userName === inputName && data.password === inputPassword) {
-      navigate("/App");
-      //?????????
+      navigate("/Main");
     } else if (data.userName !== inputName || data.password !== inputPassword) {
       setShow(true);
     }

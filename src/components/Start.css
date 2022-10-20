@@ -1,3 +1,4 @@
 .containerStart {
   border: 2px solid green;
+  background-image: (url "../images/Start.jpg");
 }
