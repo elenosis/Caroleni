@@ -8,9 +8,9 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import HeaderMain from "./components/HeaderMain";
-import Quote from "./components/Quote";
-
 import "react-datepicker/dist/react-datepicker.css";
+import Sidebar from "./components/Sidebar";
+import "./Main.css";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -54,8 +54,6 @@ const Main = () => {
   return (
     <div>
       <HeaderMain />
-      <Quote />
-
       <div>
         <input
           type="text"
@@ -80,13 +78,16 @@ const Main = () => {
       <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
         Add event
       </button>
-      <Calendar
-        localizer={localizer}
-        events={allEvents}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 400, width: "70vw", margin: "50px" }}
-      />
+      <div className="cale_side">
+        <Calendar
+          localizer={localizer}
+          events={allEvents}
+          startAccessor="start"
+          endAccessor="end"
+          style={{ height: 400, width: "70vw", margin: "50px" }}
+        />
+        <Sidebar />
+      </div>
     </div>
   );
 };

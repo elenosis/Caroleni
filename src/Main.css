@@ -1,0 +1,4 @@
+.cale_side{
+  display: flex;
+  flex-direction: row;
+}
