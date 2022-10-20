@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Quote.css";
 const Quote = () => {
   const [quote, setQuote] = useState({
     text: "",
@@ -29,7 +30,7 @@ const Quote = () => {
   }, [allQuotes]);
 
   return (
-    <div className="App">
+    <div className="quoteCard">
       <p>{quote.text}</p>
       <p>{quote.author}</p>
     </div>

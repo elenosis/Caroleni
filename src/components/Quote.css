@@ -1,10 +1,11 @@
-.weatherCard {
+.quoteCard {
   border: 2px solid rgb(69, 109, 178);
   border-radius: 1rem;
   margin: 1rem;
+  padding: 0.5rem;
   /* background-color: rgba(0, 255, 255, 0.589); */
   background-color: rgb(232, 240, 254);
-  text-align: center;
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
+  text-align: center;
   color: rgb(69, 109, 178);
 }
