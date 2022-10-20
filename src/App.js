@@ -8,7 +8,7 @@ import getDay from "date-fns/getDay";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import Header from "./components/Header";
+import HeaderMain from "./components/HeaderMain";
 import Quote from "./components/Quote";
 import { Routes, Route, Link } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
@@ -54,7 +54,7 @@ const App = () => {
   }
   return (
     <div>
-      <Header />
+      <HeaderMain />
       <Quote />
 
       <div>

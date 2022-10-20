@@ -1,0 +1,8 @@
+.headerMain {
+  text-align: center;
+}
+
+.headerMain > button {
+  display: flex;
+  justify-content: flex-end;
+}

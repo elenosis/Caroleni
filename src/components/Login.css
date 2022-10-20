@@ -1,0 +1,40 @@
+.inputLogin {
+  width: 13rem;
+  padding: 0.5rem;
+  color: rgb(6, 22, 73);
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+}
+
+.submitLogin {
+  background-color: aquamarine;
+  border: 2px solid transparent;
+  width: 13rem;
+  margin-top: 1rem;
+}
+
+.submitLogin:hover {
+  color: rgb(6, 22, 73);
+  border: 2px solid aquamarine;
+  background-color: white;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
+}
