@@ -1,18 +1,39 @@
 import { useState, useEffect } from "react";
 const Quote = () => {
-  const [data, setData] = useState(null);
+  const [quote, setQuote] = useState({
+    text: "",
+    author: "",
+  });
+  const [allQuotes, setAllQuotes] = useState([]);
 
   useEffect(() => {
     fetch("https://type.fit/api/quotes")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        setData(data);
-      });
+      .then((res) => res.json())
+      .then((data) => setAllQuotes(data));
   }, []);
-  console.log(data);
-  return <div> {}</div>;
+
+  // useEffect to set 'quote' on change of 'allQuotes' value
+  useEffect(() => {
+    if (allQuotes.length) getQuote();
+    function getQuote() {
+      const randomNumber = Math.floor(Math.random() * allQuotes.length);
+      const text = allQuotes[randomNumber].text;
+      const author = allQuotes[randomNumber].author;
+
+      setQuote((prevQuote) => ({
+        ...prevQuote,
+        text: text,
+        author: author,
+      }));
+    }
+  }, [allQuotes]);
+
+  return (
+    <div className="App">
+      <p>{quote.text}</p>
+      <p>{quote.author}</p>
+    </div>
+  );
 };
 
 export default Quote;
