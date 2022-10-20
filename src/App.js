@@ -5,12 +5,13 @@ import format from "date-fns/format";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
-// import React, { useState } from "react";
-// import DatePicker from "react-datepicker";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Header from "./components/Header";
 import Quote from "./components/Quote";
 import { Routes, Route, Link } from "react-router-dom";
+import "react-datepicker/dist/react-datepicker.css";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -45,15 +46,44 @@ const events = [
 console.log(new Date());
 
 const App = () => {
-  // const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
-  // const [allEvents, setAllEvents] = useState(events);
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState(events);
+
+  function handleAddEvents() {
+    setAllEvents([...allEvents, newEvent]);
+  }
   return (
     <div>
       <Header />
       <Quote />
+
+      <div>
+        <input
+          type="text"
+          placeholder="Add title"
+          style={{ width: "20%", marginRight: "10px" }}
+          values={newEvent.title}
+          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+        />
+      </div>
+      <DatePicker
+        placeholderText="Start date"
+        style={{ marginRight: "10px" }}
+        selected={newEvent.start}
+        onChange={(start) => setNewEvent({ ...newEvent, start })}
+      />
+      <DatePicker
+        placeholderText="End date"
+        style={{ marginRight: "10px" }}
+        selected={newEvent.end}
+        onChange={(end) => setNewEvent({ ...newEvent, end })}
+      />
+      <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
+        Add event
+      </button>
       <Calendar
         localizer={localizer}
-        events={events}
+        events={allEvents}
         startAccessor="start"
         endAccessor="end"
         style={{ height: 400, width: "70vw", margin: "50px" }}
