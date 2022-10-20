@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <div>
-      <h1 className="header">Login</h1>
+      <h1 className="headerLogin">Login</h1>
       <p className={show ? "show" : "hide"}>
         The username or password is incorrect!
       </p>

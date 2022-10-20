@@ -12,9 +12,8 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="start" element={<Start />} />
-        <Route path="login" element={<Login />} />
         <Route path="/" element={<Start />} />
+        <Route path="login" element={<Login />} />
         <Route path="main" element={<Main />} />
         <Route path="diary" element={<DiaryList />} />
         <Route path="contact" element={<ContactList />} />

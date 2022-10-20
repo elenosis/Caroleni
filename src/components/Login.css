@@ -1,24 +1,36 @@
+.headerLogin {
+  margin-top: 5rem;
+  color: rgb(69, 109, 178);
+  text-align: center;
+}
+
 .inputLogin {
   width: 13rem;
   padding: 0.5rem;
-  color: rgb(6, 22, 73);
+  color: rgb(40, 64, 105);
   cursor: pointer;
   transition: 0.5s;
   font-size: 0.8rem;
   margin-top: 1rem;
   letter-spacing: 2px;
+  border-radius: 0.25rem;
+  border: 2px solid rgb(69, 109, 178);
+  outline: none;
 }
 
 .submitLogin {
-  background-color: aquamarine;
+  background-color: rgb(69, 109, 178);
+  color: white;
   border: 2px solid transparent;
+  border-radius: 0.25rem;
   width: 13rem;
   margin-top: 1rem;
+  padding: 0.5rem;
 }
 
 .submitLogin:hover {
-  color: rgb(6, 22, 73);
-  border: 2px solid aquamarine;
+  color: rgb(40, 64, 105);
+  border: 2px solid rgb(69, 109, 178);
   background-color: white;
 }
 
