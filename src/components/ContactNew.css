@@ -1,0 +1,47 @@
+.formContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContact {
+  width: 13rem;
+  padding: 0.5rem;
+  color: rgb(6, 22, 73);
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+}
+
+textarea {
+  border: 2px solid aquamarine;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  width: 13rem;
+  margin-top: 1rem;
+}
+
+.submitContact {
+  background-color: aquamarine;
+  border: 2px solid transparent;
+  width: 13rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.submitContact:hover {
+  color: rgb(6, 22, 73);
+  border: 2px solid aquamarine;
+  background-color: white;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

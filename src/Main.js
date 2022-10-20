@@ -11,6 +11,7 @@ import HeaderMain from "./components/HeaderMain";
 import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
+import Footer from "./components/Footer";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -88,6 +89,7 @@ const Main = () => {
         />
         <Sidebar />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import Footer from "./Footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,41 +30,44 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1 className="headerLogin">Login</h1>
-      <p className={show ? "show" : "hide"}>
-        The username or password is incorrect!
-      </p>
-      <form className="formLogin" onSubmit={handleSubmit}>
-        <input
-          className="inputLogin"
-          type="text"
-          name="userName"
-          placeholder="Username"
-          onChange={(event) => setInputName(event.target.value)}
-          value={inputName}
-        />
+    <>
+      <div className="containerLogin">
+        <h1 className="headerLogin">Login</h1>
+        <p className={show ? "show" : "hide"}>
+          The username or password is incorrect!
+        </p>
+        <form className="formLogin" onSubmit={handleSubmit}>
+          <input
+            className="inputLogin"
+            type="text"
+            name="userName"
+            placeholder="Username"
+            onChange={(event) => setInputName(event.target.value)}
+            value={inputName}
+          />
 
-        <input
-          className="inputLogin"
-          type="password"
-          name="password"
-          placeholder="Password"
-          onChange={(event) => setInputPassword(event.target.value)}
-          value={inputPassword}
-        />
-        <input
-          className="inputLogin"
-          type="text"
-          name="city"
-          placeholder="City"
-          onChange={(event) => setInputCity(event.target.value)}
-          value={inputCity}
-        />
+          <input
+            className="inputLogin"
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={(event) => setInputPassword(event.target.value)}
+            value={inputPassword}
+          />
+          <input
+            className="inputLogin"
+            type="text"
+            name="city"
+            placeholder="City"
+            onChange={(event) => setInputCity(event.target.value)}
+            value={inputCity}
+          />
 
-        <input type="submit" value="Submit" className="submitLogin" />
-      </form>
-    </div>
+          <input type="submit" value="Submit" className="submitLogin" />
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 };
 

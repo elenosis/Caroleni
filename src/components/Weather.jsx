@@ -22,7 +22,7 @@ const Weather = () => {
   return (
     <div className="weatherCard">
       <p>
-        The wetaher in {weather.city} today is {weather.description}.
+        The weather in {weather.city} today is {weather.description}.
       </p>
       <p>
         The actual temperatur is {weather.temperatur}°C but it feels like{" "}
