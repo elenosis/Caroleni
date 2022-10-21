@@ -25,7 +25,7 @@ const Weather = () => {
   return (
     <div className="weatherCard">
       <p>
-        Weather in {weather.city} today:{weather.description}{" "}
+        Weather in {weather.city} today:<p> {weather.description}</p>
       </p>
       <img src={imgSrc} alt="icon" />
 

@@ -31,8 +31,9 @@ const Quote = () => {
 
   return (
     <div className="quoteCard">
-      <p>{quote.text}</p>
-      <p>{quote.author}</p>
+      <h3>Quote of the day:</h3>
+      <p>"{quote.text}"</p>
+      <p>~ {quote.author} ~</p>
     </div>
   );
 };

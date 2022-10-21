@@ -55,37 +55,41 @@ const Main = () => {
   return (
     <div>
       <HeaderMain />
-      <div>
-        <input
-          type="text"
-          placeholder="Add title"
-          style={{ width: "20%", marginRight: "10px" }}
-          values={newEvent.title}
-          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+      {/* <div className="popUp_new_event">
+        <div>
+          <input
+            type="text"
+            placeholder="Add title"
+            style={{ width: "20%", marginRight: "10px" }}
+            values={newEvent.title}
+            onChange={(e) =>
+              setNewEvent({ ...newEvent, title: e.target.value })
+            }
+          />
+        </div>
+        <DatePicker
+          placeholderText="Start date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
         />
-      </div>
-      <DatePicker
-        placeholderText="Start date"
-        style={{ marginRight: "10px" }}
-        selected={newEvent.start}
-        onChange={(start) => setNewEvent({ ...newEvent, start })}
-      />
-      <DatePicker
-        placeholderText="End date"
-        style={{ marginRight: "10px" }}
-        selected={newEvent.end}
-        onChange={(end) => setNewEvent({ ...newEvent, end })}
-      />
-      <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
-        Add event
-      </button>
+        <DatePicker
+          placeholderText="End date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.end}
+          onChange={(end) => setNewEvent({ ...newEvent, end })}
+        />
+        <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
+          Add event
+        </button>
+      </div> */}
       <div className="cale_side">
         <Calendar
           localizer={localizer}
           events={allEvents}
           startAccessor="start"
           endAccessor="end"
-          style={{ height: 400, width: "70vw", margin: "50px" }}
+          style={{ height: 400, width: "80vw", margin: "50px" }}
         />
         <Sidebar />
       </div>
