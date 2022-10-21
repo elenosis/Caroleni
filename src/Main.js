@@ -53,7 +53,12 @@ const Main = () => {
     setAllEvents([...allEvents, newEvent]);
     setShowModal(false);
   }
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [newEvent, setNewEvent] = useState({
+    title: "",
+    start: "",
+    end: "",
+    description: "",
+  });
   const [allEvents, setAllEvents] = useState(events);
   const [showModal, setShowModal] = useState(false);
 
@@ -101,6 +106,10 @@ const Main = () => {
               selected={newEvent.end}
               onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
+            <div>
+              Description
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
             <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
               Add event
             </button>
