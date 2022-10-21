@@ -1,7 +1,10 @@
 .grid {
+  position: relative;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
 }
 .box {
@@ -12,5 +15,13 @@
   text-align: center;
   grid-column: span 1;
   height:80%
-
 }
+
+.enter_caroleni{
+  color: white;
+  border: 2px solid white ;
+  padding: 5%;
+background-color: rgba(0, 174, 255, 0.765);
+  position: absolute;
+  left:40%;
+bottom:40%}
