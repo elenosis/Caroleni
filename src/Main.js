@@ -12,6 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
+import CalendarModal from "./components/Modals/CalendarModal";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -46,6 +47,9 @@ const events = [
 console.log(new Date());
 
 const Main = () => {
+  const handleClick = () => {
+    <CalendarModal />;
+  };
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(events);
 
@@ -55,34 +59,7 @@ const Main = () => {
   return (
     <div>
       <HeaderMain />
-      {/* <div className="popUp_new_event">
-        <div>
-          <input
-            type="text"
-            placeholder="Add title"
-            style={{ width: "20%", marginRight: "10px" }}
-            values={newEvent.title}
-            onChange={(e) =>
-              setNewEvent({ ...newEvent, title: e.target.value })
-            }
-          />
-        </div>
-        <DatePicker
-          placeholderText="Start date"
-          style={{ marginRight: "10px" }}
-          selected={newEvent.start}
-          onChange={(start) => setNewEvent({ ...newEvent, start })}
-        />
-        <DatePicker
-          placeholderText="End date"
-          style={{ marginRight: "10px" }}
-          selected={newEvent.end}
-          onChange={(end) => setNewEvent({ ...newEvent, end })}
-        />
-        <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
-          Add event
-        </button>
-      </div> */}
+
       <div className="cale_side">
         <Calendar
           localizer={localizer}
@@ -90,6 +67,7 @@ const Main = () => {
           startAccessor="start"
           endAccessor="end"
           style={{ height: 400, width: "80vw", margin: "50px" }}
+          onClick={handleClick}
         />
         <Sidebar />
       </div>
