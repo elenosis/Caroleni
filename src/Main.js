@@ -12,7 +12,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
-import CalendarModal from "./components/Modals/CalendarModal";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -47,28 +46,67 @@ const events = [
 console.log(new Date());
 
 const Main = () => {
-  const handleClick = () => {
-    <CalendarModal />;
+  const handleCancel = () => {
+    setShowModal(false);
   };
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
-  const [allEvents, setAllEvents] = useState(events);
-
   function handleAddEvents() {
     setAllEvents([...allEvents, newEvent]);
+    setShowModal(false);
   }
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState(events);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
   return (
     <div>
       <HeaderMain />
 
       <div className="cale_side">
-        <Calendar
-          localizer={localizer}
-          events={allEvents}
-          startAccessor="start"
-          endAccessor="end"
-          style={{ height: 400, width: "80vw", margin: "50px" }}
-          onClick={handleClick}
-        />
+        <div>
+          <Calendar
+            localizer={localizer}
+            events={allEvents}
+            startAccessor="start"
+            endAccessor="end"
+            style={{ height: 400, width: "80vw", margin: "50px" }}
+          />
+          <button onClick={handleClick}>Add new Event</button>
+        </div>
+        {showModal ? (
+          <div className="popUp_new_event">
+            <div>
+              <input
+                type="text"
+                placeholder="Add title"
+                style={{ width: "20%", marginRight: "10px" }}
+                values={newEvent.title}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, title: e.target.value })
+                }
+              />
+            </div>
+            <DatePicker
+              placeholderText="Start date"
+              style={{ marginRight: "10px" }}
+              selected={newEvent.start}
+              onChange={(start) => setNewEvent({ ...newEvent, start })}
+            />
+            <DatePicker
+              placeholderText="End date"
+              style={{ marginRight: "10px" }}
+              selected={newEvent.end}
+              onChange={(end) => setNewEvent({ ...newEvent, end })}
+            />
+            <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
+              Add event
+            </button>
+            <button onClick={handleCancel}>Cancel</button>
+          </div>
+        ) : null}
         <Sidebar />
       </div>
       <Footer />
