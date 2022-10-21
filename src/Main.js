@@ -77,7 +77,7 @@ const Main = () => {
             events={allEvents}
             startAccessor="start"
             endAccessor="end"
-            style={{ height: 400, width: "80vw", margin: "50px" }}
+            style={{ height: 400, width: "70vw", margin: "50px" }}
           />
           <button onClick={handleClick}>Add new Event</button>
         </div>
@@ -107,7 +107,7 @@ const Main = () => {
               onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
             <div>
-              Description
+              <p>Description</p>
               <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
             <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>

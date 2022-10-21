@@ -1,4 +1,13 @@
 .cale_side{
   display: flex;
   flex-direction: row;
+  position: relative;
+}
+.popUp_new_event{
+  width: 20vw;
+  background-color: rgb(69, 109, 178);
+position: absolute;
+left:40%;
+bottom:40%;
+
 }
