@@ -16,19 +16,21 @@ const Weather = () => {
         const country = data.sys.country;
         const feelsLike = data.main.feels_like;
         const description = data.weather[0].description;
+        const icon = data.weather[0].icon;
 
-        setWeather({ temperatur, city, country, feelsLike, description });
+        setWeather({ temperatur, city, country, feelsLike, description, icon });
       });
   }, []);
+  const imgSrc = `http://openweathermap.org/img/w/${weather.icon}.png`;
   return (
     <div className="weatherCard">
       <p>
-        The weather in {weather.city} today is {weather.description}.
+        Weather in {weather.city} today:{weather.description}{" "}
       </p>
-      <p>
-        The actual temperatur is {weather.temperatur}°C but it feels like{" "}
-        {weather.feelsLike}°C
-      </p>
+      <img src={imgSrc} alt="icon" />
+
+      <p>Actual temperatur: {weather.temperatur}°C</p>
+      <p>Feels like: {weather.feelsLike}°C</p>
     </div>
   );
 };
