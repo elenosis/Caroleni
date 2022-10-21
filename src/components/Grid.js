@@ -46,8 +46,11 @@ const Grid = () => {
       <div class="box">🧑‍💻</div>
       <div class="box">Monday</div>
       <div className="enter_caroleni">
-        <h3>Organise your life with Caroleni</h3>
-        <button>Click to enter</button>
+        <h3>Carpe Diem with Caroleni</h3>
+
+        <NavLink to="login" className={"navLink"}>
+          <button> Login </button>
+        </NavLink>
       </div>
     </div>
   );
