@@ -80,19 +80,19 @@ const Login = () => {
             >
               <option value="#6699CC">Choose your theme</option>
               <option value="#800080">Purple</option>
-              <option value="#FBCEB1">Apricot</option>
-              <option value="#58111A">Chocolate Cosmos</option>
-              <option value="#FE28A2">Persian rose</option>
-              <option value="#80461B">Russet</option>
+              <option value="#1D428A">Warriors Blue</option>
+              <option value="#AFDBF5">Uranian Blue</option>
+              <option value="#132257">Tottenhan Navy</option>
+              <option value="#81D8D0">Tiffany Blue</option>
               <option value="#005A9C">Dodgers Blue</option>
-              <option value="#FF7F50">Coral</option>
+              <option value="#367588">Tea Blue</option>
               <option value="#FFD700">Gold</option>
               <option value="#5F9EA0">Cadet blue</option>
               <option value="#C71585">Medium Violet Red</option>
-              <option value="peru">Peru</option>
-              <option value="blue">Blue</option>
+              <option value="#4682B4">Steel Blue</option>
+              <option value="#6A5ACD">State Blue</option>
               <option value="#BC3F4A">Sanguine</option>
-              <option value="mediumorchid">Medium Orchid</option>
+              <option value="#120A8F">Ultramarine</option>
             </select>
           </div>
 
