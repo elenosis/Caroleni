@@ -1,8 +1,12 @@
 import "./Footer.css";
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ColorContext";
 
 const Footer = () => {
+  const [theme] = useContext(ThemeContext);
+
   return (
-    <div className="containerFooter">
+    <div className="containerFooter" style={{ color: theme }}>
       <p>Made with passion ❤️ by Eleni Orfanou & Carola Zapp, Copyright 2022</p>
     </div>
   );

@@ -13,6 +13,8 @@ import Modal from "./components/Modal";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
+import { useContext } from "react";
+import ThemeContext from "./Contexts/ColorContext";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -47,6 +49,7 @@ const events = [
 console.log(new Date());
 
 const Main = () => {
+  const [theme] = useContext(ThemeContext);
   const handleCancel = () => {
     setShowModal(false);
     setZIndex(1);
@@ -89,7 +92,17 @@ const Main = () => {
               zIndex: `${zIndex}`,
             }}
           />
-          <button onClick={handleClick} style={{ margin: "auto" }}>
+          <button
+            id="add_new_event"
+            onClick={handleClick}
+            style={{
+              margin: "auto",
+              color: theme,
+              border: `2px solid ${theme}`,
+              borderBottomColor: theme,
+              borderRightColor: theme,
+            }}
+          >
             Add new Event
           </button>
         </div>

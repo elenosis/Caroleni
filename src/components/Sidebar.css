@@ -1,8 +1,7 @@
 .sidebar {
-  border: 2px solid rgb(69, 109, 178);
   border-radius: 1rem;
   margin: 2rem;
-  background-color: rgb(69, 109, 178);
+  /* background-color: rgb(69, 109, 178); */
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
   text-align: center;
   color: white;
@@ -17,8 +16,11 @@
     sans-serif;
   font-size: 1rem;
   background-color: rgb(232, 240, 254);
-  border: 2px solid rgb(69, 109, 178);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
   text-transform: uppercase;
-  color: rgb(69, 109, 178);
+  /* color: rgb(69, 109, 178); */
+}
+.sidebar>button:hover{
+  cursor: pointer;
+  font-size: 1.1rem;
 }

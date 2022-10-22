@@ -1,11 +1,16 @@
 import { useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import "./Modal.css";
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ColorContext";
 
 const Modal = ({ children }) => {
+  const [theme] = useContext(ThemeContext);
   const divRef = useRef(null);
+
   if (!divRef.current) {
     divRef.current = document.createElement("div");
+    divRef.current.style.backgroundColor = `${theme}`;
   }
 
   useEffect(() => {

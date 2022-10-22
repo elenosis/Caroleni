@@ -11,7 +11,7 @@
   color: white;
   font-size: 4vw;
   padding: 10px;
-  background: rgba(0, 174, 255, 0.57);
+  /* background: rgba(0, 174, 255, 0.57); */
   text-align: center;
   grid-column: span 1;
   height:80%
@@ -22,7 +22,7 @@
   color: white;
   border: 2px solid white ;
   padding: 5%;
-background-color: rgba(0, 174, 255, 0.765);
+/* background-color: rgba(0, 174, 255, 0.765); */
   position: absolute;
   left:40%;
 bottom:40%}

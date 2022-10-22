@@ -1,54 +1,129 @@
 import { NavLink } from "react-router-dom";
-// import "./Start.css";
-// import background from "../images/Start.jpg";
 import "./grid.css";
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ColorContext";
 
 const Start = () => {
+  const [theme] = useContext(ThemeContext);
   return (
     <div class="grid">
-      <div class="box">🤸🏼‍♀️</div>
-      <div class="box">10:00</div>
-      <div class="box">⏰</div>
-      <div class="box">Tuesday</div>
-      <div class="box">🧘</div>
+      <div class="box" style={{ background: theme }}>
+        🤸🏼‍♀️
+      </div>
+      <div class="box" style={{ background: theme }}>
+        10:00
+      </div>
+      <div class="box" style={{ background: theme }}>
+        ⏰
+      </div>
+      <div class="box" style={{ background: theme }}>
+        Tuesday
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🧘
+      </div>
 
-      <div class="box">30</div>
-      <div class="box">December</div>
-      <div class="box">9</div>
-      <div class="box"></div>
-      <div class="box">Christmas</div>
-      <div class="box">12</div>
-      <div class="box">✈️</div>
-      <div class="box">September</div>
-      <div class="box">🍕</div>
-      <div class="box">20</div>
+      <div class="box" style={{ background: theme }}>
+        30
+      </div>
+      <div class="box" style={{ background: theme }}>
+        December
+      </div>
+      <div class="box" style={{ background: theme }}>
+        9
+      </div>
+      <div class="box" style={{ background: theme }}></div>
+      <div class="box" style={{ background: theme }}>
+        Christmas
+      </div>
+      <div class="box" style={{ background: theme }}>
+        12
+      </div>
+      <div class="box" style={{ background: theme }}>
+        ✈️
+      </div>
+      <div class="box" style={{ background: theme }}>
+        September
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🍕
+      </div>
+      <div class="box" style={{ background: theme }}>
+        20
+      </div>
 
-      <div class="box">👩🏻‍⚕️</div>
-      <div class="box">February</div>
-      <div class="box">24</div>
-      <div class="box">5</div>
-      <div class="box">12:30</div>
-      <div class="box">:)</div>
-      <div class="box">🪘</div>
-      <div class="box">29</div>
-      <div class="box">🥪</div>
-      <div class="box">Monday</div>
-      <div class="box">🏝</div>
-      <div class="box">October</div>
-      <div class="box"></div>
-      <div class="box">31</div>
-      <div class="box">30</div>
-      <div class="box">:(</div>
-      <div class="box">🎂</div>
-      <div class="box">August</div>
-      <div class="box">12</div>
-      <div class="box"></div>
-      <div class="box">January</div>
-      <div class="box">17:00</div>
-      <div class="box">29</div>
-      <div class="box">🧑‍💻</div>
-      <div class="box">Monday</div>
-      <div className="enter_caroleni">
+      <div class="box" style={{ background: theme }}>
+        👩🏻‍⚕️
+      </div>
+      <div class="box" style={{ background: theme }}>
+        February
+      </div>
+      <div class="box" style={{ background: theme }}>
+        24
+      </div>
+      <div class="box" style={{ background: theme }}>
+        5
+      </div>
+      <div class="box" style={{ background: theme }}>
+        12:30
+      </div>
+      <div class="box" style={{ background: theme }}>
+        :)
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🪘
+      </div>
+      <div class="box" style={{ background: theme }}>
+        29
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🥪
+      </div>
+      <div class="box" style={{ background: theme }}>
+        Monday
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🏝
+      </div>
+      <div class="box" style={{ background: theme }}>
+        October
+      </div>
+      <div class="box" style={{ background: theme }}></div>
+      <div class="box" style={{ background: theme }}>
+        31
+      </div>
+      <div class="box" style={{ background: theme }}>
+        30
+      </div>
+      <div class="box" style={{ background: theme }}>
+        :(
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🎂
+      </div>
+      <div class="box" style={{ background: theme }}>
+        August
+      </div>
+      <div class="box" style={{ background: theme }}>
+        12
+      </div>
+      <div class="box" style={{ background: theme }}></div>
+      <div class="box" style={{ background: theme }}>
+        January
+      </div>
+      <div class="box" style={{ background: theme }}>
+        17:00
+      </div>
+      <div class="box" style={{ background: theme }}>
+        29
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🧑‍💻
+      </div>
+      <div class="box" style={{ background: theme }}>
+        Monday
+      </div>
+      <div className="enter_caroleni" style={{ backgroundColor: theme }}>
         <h3>Carpe Diem with Caroleni</h3>
 
         <NavLink to="login" className={"navLink"}>
