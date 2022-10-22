@@ -10,7 +10,7 @@ import ContactList from "./components/ContactList";
 import ThemeContext from "./Contexts/ColorContext";
 
 const App = () => {
-  const theme = useState("pink");
+  const theme = useState("#6699CC");
 
   return (
     <ThemeContext.Provider value={theme}>
