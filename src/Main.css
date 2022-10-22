@@ -3,11 +3,17 @@
   flex-direction: row;
   position: relative;
 }
+
+.cale_button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .popUp_new_event{
   width: 20vw;
   background-color: rgb(69, 109, 178);
 position: absolute;
 left:40%;
 bottom:40%;
-
+z-index: 1;
 }

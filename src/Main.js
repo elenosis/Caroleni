@@ -12,6 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
+import Blur from "react-blur";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -71,7 +72,7 @@ const Main = () => {
       <HeaderMain />
 
       <div className="cale_side">
-        <div>
+        <div className="cale_button">
           <Calendar
             localizer={localizer}
             events={allEvents}
@@ -79,7 +80,9 @@ const Main = () => {
             endAccessor="end"
             style={{ height: 400, width: "70vw", margin: "50px" }}
           />
-          <button onClick={handleClick}>Add new Event</button>
+          <button onClick={handleClick} style={{ margin: "auto" }}>
+            Add new Event
+          </button>
         </div>
         {showModal ? (
           <div className="popUp_new_event">
