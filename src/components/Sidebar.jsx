@@ -21,6 +21,7 @@ const Sidebar = () => {
       <Weather />
       <Quote />
       <button
+        onClick={() => navigate("/diary")}
         style={{
           color: theme,
           borderBottomColor: theme,
