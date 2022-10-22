@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import "./Weather.css";
+import ThemeContext from "../Contexts/ColorContext";
+import { useContext } from "react";
 
 const MY_KEY = "866470bfa7b122c147a6ef7230d9f2b3";
 
 const Weather = () => {
+  const [theme] = useContext(ThemeContext);
   const [weather, setWeather] = useState({});
   useEffect(() => {
     fetch(
@@ -23,7 +26,15 @@ const Weather = () => {
   }, []);
   const imgSrc = `http://openweathermap.org/img/w/${weather.icon}.png`;
   return (
-    <div className="weatherCard">
+    <div
+      className="weatherCard"
+      style={{
+        border: `2px solir ${theme}`,
+        borderRightColor: theme,
+        borderBottomColor: theme,
+        color: theme,
+      }}
+    >
       <p>
         Weather in {weather.city} today:<p> {weather.description}</p>
       </p>

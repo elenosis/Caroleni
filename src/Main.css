@@ -19,7 +19,6 @@
   font-size: 0.8rem;
   background-color: rgb(232, 240, 254);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
-  text-transform: uppercase;
 }
 #add_new_event:hover{
   cursor: pointer;

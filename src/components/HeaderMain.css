@@ -17,4 +17,11 @@
   background-color: rgb(232, 240, 254);
   border: 2px solid rgb(69, 109, 178);
   font-size: 1rem;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
+
+}
+
+button:hover{
+  font-size: 1.1rem;
+  cursor:pointer;
 }

@@ -103,7 +103,7 @@ const Main = () => {
               borderRightColor: theme,
             }}
           >
-            Add new Event
+            Add new event
           </button>
         </div>
         {showModal ? (

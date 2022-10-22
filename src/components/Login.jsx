@@ -6,6 +6,7 @@ import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
 const Login = () => {
+  const [theme, setTheme] = useContext(ThemeContext);
   const navigate = useNavigate();
   const [data, setData] = useState({
     userName: "carola",
@@ -17,7 +18,6 @@ const Login = () => {
   const [inputPassword, setInputPassword] = useState("");
   const [inputCity, setInputCity] = useState("");
   const [show, setShow] = useState(false);
-  const [theme] = useContext(ThemeContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -70,6 +70,31 @@ const Login = () => {
             value={inputCity}
             style={{ border: `2px solid ${theme}` }}
           />
+          <div>
+            <select
+              name="theme"
+              id="theme"
+              value={theme}
+              onChange={(e) => setTheme(e.target.value)}
+              onBlur={(e) => setTheme(e.target.value)}
+            >
+              <option value="#6699CC">Choose your theme</option>
+              <option value="#800080">Purple</option>
+              <option value="#FBCEB1">Apricot</option>
+              <option value="#58111A">Chocolate Cosmos</option>
+              <option value="#FE28A2">Persian rose</option>
+              <option value="#80461B">Russet</option>
+              <option value="#005A9C">Dodgers Blue</option>
+              <option value="#FF7F50">Coral</option>
+              <option value="#FFD700">Gold</option>
+              <option value="#5F9EA0">Cadet blue</option>
+              <option value="#C71585">Medium Violet Red</option>
+              <option value="peru">Peru</option>
+              <option value="blue">Blue</option>
+              <option value="#BC3F4A">Sanguine</option>
+              <option value="mediumorchid">Medium Orchid</option>
+            </select>
+          </div>
 
           <input
             type="submit"

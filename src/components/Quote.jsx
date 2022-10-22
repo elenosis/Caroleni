@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import "./Quote.css";
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ColorContext";
+
 const Quote = () => {
+  const [theme] = useContext(ThemeContext);
   const [quote, setQuote] = useState({
     text: "",
     author: "",
@@ -30,7 +34,15 @@ const Quote = () => {
   }, [allQuotes]);
 
   return (
-    <div className="quoteCard">
+    <div
+      className="quoteCard"
+      style={{
+        border: `2px solir ${theme}`,
+        borderRightColor: theme,
+        borderBottomColor: theme,
+        color: theme,
+      }}
+    >
       <h3>Quote of the day:</h3>
       <p>"{quote.text}"</p>
       <p>~ {quote.author} ~</p>
