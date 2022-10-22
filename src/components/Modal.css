@@ -1,0 +1,33 @@
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  width: 15%;
+  background-color:  rgb(69, 109, 178);
+display: flex;
+flex-direction: column;
+gap: 2px;
+  text-align: left;
+  padding: 2rem;
+  border-radius: 2rem;
+  color: white;
+}
+#modal>div>button{
+  margin: auto;
+}
+
+

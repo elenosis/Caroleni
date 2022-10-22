@@ -9,10 +9,10 @@ import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import HeaderMain from "./components/HeaderMain";
 import "react-datepicker/dist/react-datepicker.css";
+import Modal from "./components/Modal";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
-import Blur from "react-blur";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -49,10 +49,12 @@ console.log(new Date());
 const Main = () => {
   const handleCancel = () => {
     setShowModal(false);
+    setZIndex(1);
   };
   function handleAddEvents() {
     setAllEvents([...allEvents, newEvent]);
     setShowModal(false);
+    setZIndex(1);
   }
   const [newEvent, setNewEvent] = useState({
     title: "",
@@ -62,9 +64,11 @@ const Main = () => {
   });
   const [allEvents, setAllEvents] = useState(events);
   const [showModal, setShowModal] = useState(false);
+  const [zIndex, setZIndex] = useState(1);
 
   const handleClick = () => {
     setShowModal(true);
+    setZIndex(-1);
   };
 
   return (
@@ -78,19 +82,24 @@ const Main = () => {
             events={allEvents}
             startAccessor="start"
             endAccessor="end"
-            style={{ height: 400, width: "70vw", margin: "50px" }}
+            style={{
+              height: 400,
+              width: "70vw",
+              margin: "50px",
+              zIndex: `${zIndex}`,
+            }}
           />
           <button onClick={handleClick} style={{ margin: "auto" }}>
             Add new Event
           </button>
         </div>
         {showModal ? (
-          <div className="popUp_new_event">
+          <Modal className="popUp_new_event">
             <div>
               <input
                 type="text"
-                placeholder="Add title"
-                style={{ width: "20%", marginRight: "10px" }}
+                placeholder="Add event title"
+                style={{ marginRight: "10px" }}
                 values={newEvent.title}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, title: e.target.value })
@@ -110,14 +119,16 @@ const Main = () => {
               onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
             <div>
-              <p>Description</p>
+              <p>Description:</p>
               <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
-            <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
-              Add event
-            </button>
-            <button onClick={handleCancel}>Cancel</button>
-          </div>
+            <div className="modal_buttons">
+              <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
+                Add event
+              </button>
+              <button onClick={handleCancel}>Cancel</button>
+            </div>
+          </Modal>
         ) : null}
         <Sidebar />
       </div>
