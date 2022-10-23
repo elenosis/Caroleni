@@ -2,6 +2,7 @@ import HeaderContact from "./HeaderContact";
 import Footer from "./Footer";
 import "./ContactList.css";
 import ContactItem from "./ContactItem";
+import ContactDetail from "./ContactDetail";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
@@ -54,11 +55,11 @@ const ContactList = () => {
           firstname={contact.firstname}
           lastname={contact.lastname}
           birthday={contact.birthday}
-          // phone={contact.phone}
-          // mobile={contact.mobile}
-          // city={contact.city}
-          // street={contact.street}
-          // email={contact.email}
+          phone={contact.phone}
+          mobile={contact.mobile}
+          city={contact.city}
+          street={contact.street}
+          email={contact.email}
           image={contact.image}
         />
       );
