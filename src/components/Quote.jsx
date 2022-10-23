@@ -37,7 +37,7 @@ const Quote = () => {
     <div
       className="quoteCard"
       style={{
-        border: `2px solir ${theme}`,
+        border: `2px solid ${theme}`,
         borderRightColor: theme,
         borderBottomColor: theme,
         color: theme,

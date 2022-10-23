@@ -29,7 +29,7 @@ const Weather = () => {
     <div
       className="weatherCard"
       style={{
-        border: `2px solir ${theme}`,
+        border: `2px solid ${theme}`,
         borderRightColor: theme,
         borderBottomColor: theme,
         color: theme,

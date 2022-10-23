@@ -14,7 +14,7 @@ const HeaderContact = () => {
         className="contactBack"
         style={{ color: theme, borderColor: theme }}
       >
-        back to Main
+        Back to Main
       </button>
     </div>
   );

@@ -7,7 +7,7 @@ const HeaderContactDetails = () => {
     <div className="headerContact">
       <h1>Contact-Details</h1>
       <button onClick={() => navigate("/contact")} className="contactBack">
-        back to Contact-List
+        Back to Contact-List
       </button>
     </div>
   );

@@ -136,10 +136,12 @@ const Start = () => {
         Monday
       </div>
       <div className="enter_caroleni" style={{ backgroundColor: theme }}>
-        <h3>Carpe Diem with Caroleni</h3>
-
+        {/* <h3>Carpe Diem with Caroleni</h3> */}
+        <h1>Carpe Diem</h1>
+        <p>with</p>
+        <h3>Caroleni</h3>
         <NavLink to="login" className={"navLink"}>
-          <button> click to start </button>
+          <button> Click to start </button>
         </NavLink>
       </div>
     </div>

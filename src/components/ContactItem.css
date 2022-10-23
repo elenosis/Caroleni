@@ -1,14 +1,18 @@
 .containerContactItem {
   width: 80vw;
   color: rgb(16, 50, 94);
+  border-radius: 0.5rem;
+  margin: 1rem;
 }
 
 .item {
   display: flex;
   /* background-color: rgb(106, 208, 255); */
-  background-color: white;
-  margin: 0.5rem;
+  margin: 1rem;
   border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: rgb(232, 240, 254);
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
 
 .img {
@@ -32,14 +36,16 @@
 }
 
 .moreDetailButton {
-  margin: 2rem;
+  margin: 2.5rem;
   padding: 0 1rem;
   border-radius: 0.5rem;
   color: rgb(16, 50, 94);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background-color: white;
+
   border: 2px solid rgb(16, 50, 94);
   font-size: 1rem;
+  background-color: rgb(232, 240, 254);
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }

@@ -2,6 +2,10 @@ import HeaderContact from "./HeaderContact";
 import Footer from "./Footer";
 import "./ContactList.css";
 import ContactItem from "./ContactItem";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import ThemeContext from "../Contexts/ColorContext";
+// import Modal from "./components/Modal";
 
 const contactArray = [
   {
@@ -9,7 +13,7 @@ const contactArray = [
     lastname: "Alos",
     birthday: "15.10.1955",
     city: "Hamburg",
-    street: "HAnsestrasse 5",
+    street: "Hansestrasse 5",
     phone: "+49 1234 56788",
     mobile: "+49 1234 56788",
     email: "hugo.alos@gmail.com",
@@ -40,6 +44,8 @@ const contactArray = [
 ];
 
 const ContactList = () => {
+  const [theme] = useContext(ThemeContext);
+  const navigate = useNavigate();
   let content;
   if (contactArray.length > 0) {
     content = contactArray.map((contact) => {
@@ -66,9 +72,16 @@ const ContactList = () => {
       <HeaderContact />
       <div className="containerContactList">
         <div className="contactBox">
-          <ul className="contactList">
-            <li className="contactItem"> {content}</li>
+          <ul className="contactUList">
+            <li className="contactLi"> {content}</li>
           </ul>
+          <button
+            onClick={() => navigate("/contactNew")}
+            className="addContactButton"
+            style={{ color: theme, borderColor: theme }}
+          >
+            Add new Contact
+          </button>
         </div>
       </div>
       <Footer />

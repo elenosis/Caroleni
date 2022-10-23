@@ -17,19 +17,25 @@ const ContactItem = (props) => {
         border: `2px solid ${theme}`,
       }}
     >
-      <div className="item">
+      <div className="item" style={{ color: theme, borderColor: theme }}>
         <div className="img">
           <img src={props.image} alt={props.firstname} width="100" />
         </div>
-        <p className="name">
-          {props.lastname}, {props.firstname}
-        </p>
-        <p className="birthday"> 🎂 Birthday: {props.birthday}</p>
+        <div className="name">
+          <p>
+            {" "}
+            👤 {props.lastname}, {props.firstname}
+          </p>
+        </div>
+        <div className="birthday">
+          <p> 🎂 Birthday: {props.birthday}</p>
+        </div>
         <button
           onClick={() => navigate("/contactDetail")}
           className="moreDetailButton"
+          style={{ color: theme, borderColor: theme }}
         >
-          view more Details
+          View more Details
         </button>
       </div>
     </div>
@@ -37,5 +43,3 @@ const ContactItem = (props) => {
 };
 
 export default ContactItem;
-
-//Modal?
