@@ -3,6 +3,7 @@ import Weather from "./Weather";
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 import CurrentDate from "./CurrentDate";
+import Weekend from "./Weekend";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
@@ -18,6 +19,7 @@ const Sidebar = () => {
       }}
     >
       <CurrentDate />
+      <Weekend />
       <Weather />
       <Quote />
       <button

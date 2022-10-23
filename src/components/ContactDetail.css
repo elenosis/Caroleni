@@ -1,0 +1,9 @@
+.containerContactDetail {
+  height: 80vh;
+  border: 2px solid green;
+}
+
+.contactBoxDetail {
+  border: 2px solid red;
+  margin-top: 2rem;
+}

@@ -1,0 +1,45 @@
+.containerContactItem {
+  width: 80vw;
+  color: rgb(16, 50, 94);
+}
+
+.item {
+  display: flex;
+  /* background-color: rgb(106, 208, 255); */
+  background-color: white;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.img {
+  display: flex;
+  justify-content: left;
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid rgb(16, 50, 94);
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.name,
+.birthday {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.moreDetailButton {
+  margin: 2rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  color: rgb(16, 50, 94);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: white;
+  border: 2px solid rgb(16, 50, 94);
+  font-size: 1rem;
+}

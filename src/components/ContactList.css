@@ -1,3 +1,19 @@
 .containerContactList {
   height: 80vh;
 }
+
+.contactBox {
+  margin-top: 2rem;
+}
+
+.contactList {
+  padding: 0;
+}
+
+.contactItem {
+  width: 80vw;
+  margin-top: 2rem;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+}
