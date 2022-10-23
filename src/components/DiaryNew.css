@@ -1,0 +1,37 @@
+.diary_new_entry{
+  border-radius: 1rem;
+  margin: 2rem;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+/* justify-content: center; */
+padding: 20px;}
+
+.how_do_you_feel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+.how_do_you_feel p:hover{
+  font-size: 1.2rem;
+  cursor: pointer;
+
+}
+
+textarea{
+  margin-top: 10px;
+margin-right:10px ;
+margin-left: 10px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+form button{
+  margin: auto;
+}

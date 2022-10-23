@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className="containerFooter" style={{ color: theme }}>
-      <p>Made with passion ❤️ by Eleni Orfanou & Carola Zapp, Copyright 2022</p>
+      <p>Made with passion ❤️ by Eleni Orfanou & Carola Zapp, © 2022</p>
     </div>
   );
 };

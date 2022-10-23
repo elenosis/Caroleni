@@ -11,7 +11,7 @@ const Start = () => {
         🤸🏼‍♀️
       </div>
       <div class="box" style={{ background: theme }}>
-        10:00
+        December
       </div>
       <div class="box" style={{ background: theme }}>
         ⏰
@@ -26,53 +26,61 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         30
       </div>
-      <div class="box" style={{ background: theme }}>
-        December
-      </div>
-      <div class="box" style={{ background: theme }}>
-        9
-      </div>
-      <div class="box" style={{ background: theme }}></div>
-      <div class="box" style={{ background: theme }}>
-        Christmas
-      </div>
-      <div class="box" style={{ background: theme }}>
-        12
-      </div>
-      <div class="box" style={{ background: theme }}>
-        ✈️
-      </div>
-      <div class="box" style={{ background: theme }}>
-        September
-      </div>
-      <div class="box" style={{ background: theme }}>
-        🍕
-      </div>
-      <div class="box" style={{ background: theme }}>
-        20
-      </div>
 
       <div class="box" style={{ background: theme }}>
         👩🏻‍⚕️
       </div>
       <div class="box" style={{ background: theme }}>
+        9
+      </div>
+
+      <div class="box" style={{ background: theme }}>
+        🎄
+      </div>
+      <div class="box" style={{ background: theme }}>
+        2023
+      </div>
+
+      <div class="box" style={{ background: theme }}>
+        🥂
+      </div>
+      <div class="box" style={{ background: theme }}>
+        September
+      </div>
+      <div class="box" style={{ background: theme }}>
+        ✈️
+      </div>
+
+      <div class="box" style={{ background: theme }}>
+        20
+      </div>
+      <div class="box" style={{ background: theme }}>
+        🍕
+      </div>
+
+      <div class="box" style={{ background: theme }}>
+        10:00
+      </div>
+
+      <div class="box" style={{ background: theme }}>
+        👎
+      </div>
+      <div class="box" style={{ background: theme }}>
         February
       </div>
       <div class="box" style={{ background: theme }}>
-        24
-      </div>
-      <div class="box" style={{ background: theme }}>
-        5
+        🚴‍♀️
       </div>
       <div class="box" style={{ background: theme }}>
         12:30
       </div>
       <div class="box" style={{ background: theme }}>
-        :)
-      </div>
-      <div class="box" style={{ background: theme }}>
         🪘
       </div>
+      <div class="box" style={{ background: theme }}>
+        :)
+      </div>
+
       <div class="box" style={{ background: theme }}>
         29
       </div>
@@ -88,12 +96,14 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         October
       </div>
-      <div class="box" style={{ background: theme }}></div>
+      <div class="box" style={{ background: theme }}>
+        🎦
+      </div>
       <div class="box" style={{ background: theme }}>
         31
       </div>
       <div class="box" style={{ background: theme }}>
-        30
+        📠
       </div>
       <div class="box" style={{ background: theme }}>
         :(
@@ -105,14 +115,16 @@ const Start = () => {
         August
       </div>
       <div class="box" style={{ background: theme }}>
+        ☎️
+      </div>
+      <div class="box" style={{ background: theme }}>
         12
       </div>
-      <div class="box" style={{ background: theme }}></div>
       <div class="box" style={{ background: theme }}>
         January
       </div>
       <div class="box" style={{ background: theme }}>
-        17:00
+        📒
       </div>
       <div class="box" style={{ background: theme }}>
         29
