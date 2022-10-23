@@ -139,7 +139,7 @@ const Start = () => {
         <h3>Carpe Diem with Caroleni</h3>
 
         <NavLink to="login" className={"navLink"}>
-          <button> Login </button>
+          <button> click to start </button>
         </NavLink>
       </div>
     </div>
