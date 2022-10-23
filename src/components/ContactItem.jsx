@@ -18,16 +18,21 @@ const ContactItem = (props) => {
       }}
     >
       <div className="item" style={{ color: theme, borderColor: theme }}>
-        <div className="img">
-          <img src={props.image} alt={props.firstname} width="100" />
+        <div className="contactImg">
+          <img
+            className="picture"
+            src={props.image}
+            alt={props.firstname}
+            width="100"
+          />
         </div>
-        <div className="name">
+        <div className="contactName">
           <p>
             {" "}
             👤 {props.lastname}, {props.firstname}
           </p>
         </div>
-        <div className="birthday">
+        <div className="contactBirthday">
           <p> 🎂 Birthday: {props.birthday}</p>
         </div>
         <button
