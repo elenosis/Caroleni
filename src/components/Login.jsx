@@ -102,20 +102,20 @@ const Login = () => {
             className="submitLogin"
             style={{ border: `2px solid transparent`, backgroundColor: theme }}
           />
-          <p>
-            Not a Caroleni member?{" "}
-            <button
-              onClick={navigate("/subscribe")}
-              style={{
-                border: "none",
-                backgroundColor: "white",
-                textDecoration: "underline",
-              }}
-            >
-              <strong> Subscribe</strong>
-            </button>
-          </p>
         </form>
+        {/* <p>
+          Not a Caroleni member?{" "}
+          <button
+            onClick={navigate("/subscribe")}
+            style={{
+              border: "none",
+              backgroundColor: "white",
+              textDecoration: "underline",
+            }}
+          >
+            <strong> Subscribe</strong>
+          </button>
+        </p> */}
       </div>
       <Footer />
     </>

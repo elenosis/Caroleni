@@ -72,20 +72,18 @@ const Subscribe = () => {
               backgroundColor: theme,
             }}
           />
-          <p>
-            Already a Caroleni member?{" "}
-            <button
-              onClick={navigate("/login")}
-              style={{
-                border: "none",
-                backgroundColor: "white",
-                textDecoration: "underline",
-              }}
-            >
-              <strong> Login</strong>
-            </button>
-          </p>
         </form>
+        {/* <p>Already a Caroleni member? </p>
+        <button
+          onClick={navigate("/login")}
+          style={{
+            border: "none",
+            backgroundColor: "white",
+            textDecoration: "underline",
+          }}
+        >
+          <strong> Login</strong>
+        </button> */}
       </div>
       <Footer />
     </>
