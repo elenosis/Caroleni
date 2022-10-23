@@ -8,6 +8,7 @@ import Main from "./Main";
 import DiaryList from "./components/DiaryList";
 import ContactList from "./components/ContactList";
 import ThemeContext from "./Contexts/ColorContext";
+import Subscribe from "./components/Subscribe";
 
 const App = () => {
   const theme = useState("#6699CC");
@@ -18,6 +19,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Start />} />
           <Route path="login" element={<Login />} />
+          <Route path="subscribe" element={<Subscribe />} />
           <Route path="main" element={<Main />} />
           <Route path="diary" element={<DiaryList />} />
           <Route path="contact" element={<ContactList />} />
