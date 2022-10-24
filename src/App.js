@@ -9,7 +9,7 @@ import DiaryList from "./components/DiaryList";
 import ContactList from "./components/ContactList";
 import ThemeContext from "./Contexts/ColorContext";
 import Subscribe from "./components/Subscribe";
-import ContactDetail from "./components/ContactDetail";
+
 import ContactNew from "./components/ContactNew";
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="main" element={<Main />} />
           <Route path="diary" element={<DiaryList />} />
           <Route path="contact" element={<ContactList />} />
-          <Route path="contactDetail" element={<ContactDetail />} />
+
           <Route path="contactNew" element={<ContactNew />} />
         </Routes>
       </div>

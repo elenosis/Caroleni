@@ -53,3 +53,35 @@
   background-color: rgb(232, 240, 254);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
+
+
+.containerContactDetail {
+  height: fit-content;
+  width: fit-content;
+  color: rgb(16, 50, 94);
+  margin: auto;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.detailRow {
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: start;
+  /* display: grid;;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; */
+  width: 40vw;
+  height: 5vh;
+  padding: 1rem;
+  background-color: rgb(232, 240, 254);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
+}
+
+.detailRow > p {
+  padding-right: 2rem;
+}

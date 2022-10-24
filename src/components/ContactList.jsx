@@ -2,7 +2,6 @@ import HeaderContact from "./HeaderContact";
 import Footer from "./Footer";
 import "./ContactList.css";
 import ContactItem from "./ContactItem";
-import ContactDetail from "./ContactDetail";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
