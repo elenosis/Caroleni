@@ -4,10 +4,12 @@ import "./ContactList.css";
 import ContactItem from "./ContactItem";
 import { useContext, useState } from "react";
 import ThemeContext from "../Contexts/ColorContext";
+// import { uuid } from "uuidv4";
 // import Modal from "./components/Modal";
 
 const contactArray = [
   {
+    // id: "012lokhlh",
     firstname: "Hugo",
     lastname: "Alos",
     birthday: "15.10.1955",
@@ -19,6 +21,7 @@ const contactArray = [
     image: "../images/Hugo.jpg",
   },
   {
+    // id: "012lo",
     firstname: "Antonia",
     lastname: "Bertram",
     birthday: "15.10.2000",
@@ -30,6 +33,7 @@ const contactArray = [
     image: "../images/Antonia.jpg",
   },
   {
+    // id: "024sdkj",
     firstname: "Nils",
     lastname: "Holgerson",
     birthday: "15.10.1995",
@@ -43,20 +47,39 @@ const contactArray = [
 ];
 
 const ContactList = () => {
+  const [contacts, setContacts] = useState(contactArray);
   const [inputFirstname, setInputFirstname] = useState("");
   const [inputLastname, setInputLastname] = useState("");
   const [inputPhone, setInputPhone] = useState("");
   const [inputMobilePhone, setInputMobilePhone] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputCity, setInputCity] = useState("");
+  const [inputImage, setInputImage] = useState("");
   const [inputStreet, setInputStreet] = useState("");
   const [inputBirthday, setInputBirthday] = useState("");
   const [theme] = useContext(ThemeContext);
   const [showModalNewContact, setShowModalNewContact] = useState(false);
   const [show, setShow] = useState("");
 
+  const addNewContact = () => {
+    // const id = uuid();
+    const newContact = {
+      firstname: inputFirstname,
+      lastname: inputLastname,
+      birthday: inputBirthday,
+      city: inputCity,
+      street: inputStreet,
+      phone: inputPhone,
+      mobile: inputMobilePhone,
+      email: inputEmail,
+      image: inputImage,
+    };
+    setContacts((prev) => [...prev, newContact]);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    addNewContact();
     setInputFirstname("");
     setInputLastname("");
     setInputPhone("");
@@ -78,7 +101,7 @@ const ContactList = () => {
 
   let content;
   if (contactArray.length > 0) {
-    content = contactArray.map((contact) => {
+    content = contacts.map((contact) => {
       console.log(contact.birthday);
       return (
         <ContactItem
