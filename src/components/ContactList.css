@@ -34,3 +34,64 @@
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
   width: 13rem;
 }
+
+.formContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newContactBox {
+  width: min-content;
+  margin: auto;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  background: linear-gradient(rgb(69, 109, 178), transparent);
+}
+
+.label {
+  padding: 0.5rem;
+}
+
+.inputContact {
+  width: 13rem;
+  padding: 0.5rem;
+  color: rgb(6, 22, 73);
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.submitContact {
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  width: 13rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
+}
+
+.submitContact:hover {
+  color: rgb(40, 64, 105);
+  border: 2px solid rgb(69, 109, 178);
+  background-color: white;
+}
+
+#theme {
+  width: 13rem;
+  padding: 0.5rem;
+  /* color: rgb(40, 64, 105); */
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  outline: none;
+}

@@ -2,7 +2,6 @@ import HeaderContact from "./HeaderContact";
 import Footer from "./Footer";
 import "./ContactList.css";
 import ContactItem from "./ContactItem";
-import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 // import Modal from "./components/Modal";
@@ -52,7 +51,6 @@ const ContactList = () => {
   const [inputCity, setInputCity] = useState("");
   const [inputStreet, setInputStreet] = useState("");
   const [inputBirthday, setInputBirthday] = useState("");
-  const navigate = useNavigate();
   const [theme] = useContext(ThemeContext);
   const [showModalNewContact, setShowModalNewContact] = useState(false);
   const [show, setShow] = useState("");
@@ -221,17 +219,6 @@ const ContactList = () => {
                     style={{ border: `2px solid ${theme}` }}
                   />
 
-                  {/* <input type="submit" value="Submit" className="submitContact" /> */}
-                  {/* Submit Button für New Contact - noch ohne Funktion! */}
-                  {/* <input
-                type="submit"
-                value="Submit"
-                className="submitContact"
-                style={{
-                  border: `2px solid transparent`,
-                  backgroundColor: theme,
-                }}
-              /> */}
                   <button
                     className="submitContact"
                     style={{

@@ -10,8 +10,6 @@ import ContactList from "./components/ContactList";
 import ThemeContext from "./Contexts/ColorContext";
 import Subscribe from "./components/Subscribe";
 
-import ContactNew from "./components/ContactNew";
-
 const App = () => {
   const theme = useState("#6699CC");
 
@@ -25,8 +23,6 @@ const App = () => {
           <Route path="main" element={<Main />} />
           <Route path="diary" element={<DiaryList />} />
           <Route path="contact" element={<ContactList />} />
-
-          <Route path="contactNew" element={<ContactNew />} />
         </Routes>
       </div>
     </ThemeContext.Provider>
