@@ -16,7 +16,7 @@ const DiaryList = () => {
   const [show, setShow] = useState("");
   const [theme] = useContext(ThemeContext);
 
-  const handleChanheTextarea = () => {};
+  const handleChangeTextarea = () => {};
   const hanldeNewDiary = () => {
     setShow("show");
     setShowModalNewEntry(true);
@@ -70,7 +70,7 @@ const DiaryList = () => {
                 rows="20"
                 placeholder="Dear Diary..."
                 value=""
-                onChange={handleChanheTextarea}
+                onChange={handleChangeTextarea}
               ></textarea>
               <div className="diary_btns">
                 <button>Save</button>
