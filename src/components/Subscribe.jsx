@@ -25,8 +25,8 @@ const Subscribe = () => {
       username: inputName,
       password: inputPassword,
     });
-    alert("Thank you for subscribing in Caroleni!");
-    navigate("/Main");
+    // alert("Thank you for subscribing in Caroleni!");
+    // navigate("/Main");
     console.log(user);
   };
   return (

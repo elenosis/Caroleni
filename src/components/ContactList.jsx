@@ -50,6 +50,7 @@ const ContactList = () => {
   let content;
   if (contactArray.length > 0) {
     content = contactArray.map((contact) => {
+      console.log(contact.birthday);
       return (
         <ContactItem
           firstname={contact.firstname}

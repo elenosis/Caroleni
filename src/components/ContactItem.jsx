@@ -27,10 +27,7 @@ const ContactItem = (props) => {
           />
         </div>
         <div className="contactName">
-          <p>
-            {" "}
-            👤 {props.lastname}, {props.firstname}
-          </p>
+          <p> 👤 props.lastname, {props.firstname}</p>
         </div>
         <div className="contactBirthday">
           <p> 🎂 Birthday: {props.birthday}</p>
