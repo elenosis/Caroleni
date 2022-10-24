@@ -1,12 +1,12 @@
-.headerMain {
+.header {
   display: flex;
   justify-content: flex-end;
   text-align: center;
-  /* background-color: rgb(69, 109, 178); */
+  background: linear-gradient(rgb(69, 109, 178), transparent);
   color: white;
 }
 
-.mainBack {
+.back {
   margin: 1rem;
   border-radius: 0.5rem;
   color: rgb(69, 109, 178);
@@ -19,7 +19,7 @@
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
 
-button:hover {
-  font-size: 1.1rem;
+.back:hover {
   cursor: pointer;
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }

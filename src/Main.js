@@ -94,61 +94,94 @@ const Main = () => {
             }}
           />
           <button
-            id="add_new_event"
+            className="add_new_event"
             onClick={handleClick}
+            // style={{
+            //   margin: "auto",
+            //   color: theme,
+            //   border: `2px solid ${theme}`,
+            //   borderBottomColor: theme,
+            //   borderRightColor: theme,
+            // }}
             style={{
               margin: "auto",
-              color: theme,
-              border: `2px solid ${theme}`,
-              borderBottomColor: theme,
-              borderRightColor: theme,
+              border: `2px solid transparent`,
+              backgroundColor: theme,
             }}
           >
-            Add new event
+            Add new Event
           </button>
         </div>
         {showModal ? (
-          <Modal className="popUp_new_event">
+          <Modal>
             <div>
               <input
+                className="inputEvent"
                 type="text"
                 placeholder="Add event title"
-                style={{ marginRight: "10px" }}
                 values={newEvent.title}
+                style={{ border: `2px solid ${theme}` }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, title: e.target.value })
                 }
               />
             </div>
             <DatePicker
+              className="datePicker"
               placeholderText="Start date"
-              style={{ marginRight: "10px" }}
+              // style={{ border: `2px solid ${theme}` }}
               selected={newEvent.start}
               onChange={(start) => setNewEvent({ ...newEvent, start })}
             />
             <DatePicker
+              className="datePicker"
               placeholderText="End date"
-              style={{ marginRight: "10px" }}
               selected={newEvent.end}
+              // style={{ border: `2px solid ${theme}` }}
               onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
             <div>
               <p>Description:</p>
+              {/* <textarea name="description" id="" cols="30" rows="10"></textarea> */}
               <input
+                className="inputEvent"
                 type="text"
+                rows="40"
+                cols="50"
+                name="comment"
                 placeholder="Add description"
-                style={{ marginRight: "10px" }}
                 values={newEvent.description}
+                style={{ border: `2px solid ${theme}` }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, description: e.target.value })
                 }
               />
             </div>
-            <div className="modal_buttons">
-              <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>
+            <div>
+              <button
+                className="modal_buttons"
+                style={{
+                  color: theme,
+                  border: `2px solid ${theme}`,
+                  borderBottomColor: theme,
+                  borderRightColor: theme,
+                }}
+                onClick={handleAddEvents}
+              >
                 Add event
               </button>
-              <button onClick={handleCancel}>Cancel</button>
+              <button
+                className="modal_buttons"
+                style={{
+                  color: theme,
+                  border: `2px solid ${theme}`,
+                  borderBottomColor: theme,
+                  borderRightColor: theme,
+                }}
+                onClick={handleCancel}
+              >
+                Cancel
+              </button>
             </div>
           </Modal>
         ) : null}

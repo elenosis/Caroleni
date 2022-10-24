@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
     userName: "carola",
-    password: "huhu4",
+    password: "h",
     city: "Berlin",
   });
 
@@ -98,20 +98,29 @@ const Login = () => {
               <option value="#005A9C">Dodgers Blue</option>
             </select>
           </div>
-
-          <input
+          <button
+            className="submitLogin"
+            style={{
+              border: `2px solid transparent`,
+              backgroundColor: theme,
+            }}
+          >
+            Submit
+          </button>
+          {/* <input
             type="submit"
             value="Submit"
             className="submitLogin"
             style={{ border: `2px solid transparent`, backgroundColor: theme }}
-          />
+          /> */}
         </form>
-        <div className="nav_to_subscribe">
+        <div className="nav_to_subscribe" style={{ color: theme }}>
           <p>
-            Not a Caroleni member?
+            Not a Caroleni Member ?
             <button
               onClick={handleClickSubscribe}
               style={{
+                color: theme,
                 border: "none",
                 backgroundColor: "white",
                 textDecoration: "underline",

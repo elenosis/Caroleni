@@ -50,7 +50,10 @@ const ContactItem = (props) => {
         <button
           onClick={handleShowDetails}
           className="moreDetailButton"
-          style={{ color: theme, borderColor: theme }}
+          style={{
+            border: `2px solid transparent`,
+            backgroundColor: theme,
+          }}
         >
           {btnText}
         </button>
@@ -70,38 +73,57 @@ const ContactItem = (props) => {
             style={{ color: theme, borderColor: theme }}
           >
             <p>👤</p>
-            <p>Firstname: {props.firstname} </p>
-            <p>Lastname: {props.lastname}</p>
+            <p>
+              <strong>Firstname:</strong> {props.firstname}{" "}
+            </p>
+            <p>
+              <strong>Lastname:</strong> {props.lastname}
+            </p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>📞</p>
-            <p>Phone: {props.phone}</p>
-            <p>Mobile: {props.mobilePhone}</p>
+            <p>
+              <strong>Phone: </strong>
+              {props.phone}
+            </p>
+            <p>
+              <strong>Mobile:</strong> {props.mobilePhone}
+            </p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🏙</p>
-            <p>City: {props.city}</p>
-            <p>Street: {props.street}</p>
+            <p>
+              <strong>City:</strong> {props.city}
+            </p>
+            <p>
+              <strong>Street: </strong>
+              {props.street}
+            </p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>✉️</p>
-            <p>Email: {props.email}</p>
+            <p>
+              <strong>Email:</strong> {props.email}
+            </p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🎂</p>
-            <p>Birthday: {props.birthday}</p>
+            <p>
+              <strong> Birthday: </strong>
+              {props.birthday}
+            </p>
           </div>
         </div>
       )}
@@ -110,3 +132,4 @@ const ContactItem = (props) => {
 };
 
 export default ContactItem;
+<strong></strong>;

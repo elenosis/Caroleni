@@ -1,11 +1,9 @@
 .container_subscribe {
   height: 80vh;
-
 }
 
 .header_subscribe {
   margin-top: 5rem;
-  /* color: rgb(69, 109, 178); */
   text-align: center;
 }
 
@@ -29,15 +27,16 @@
   width: 13rem;
   margin-top: 1rem;
   padding: 0.5rem;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
 
 .submit_subscribe:hover {
   color: rgb(40, 64, 105);
-  border: 2px solid rgb(69, 109, 178);
-  background-color: white;
+  cursor: pointer;
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }
 
-.form_subscribe{
+.form_subscribe {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,8 +53,7 @@
   text-align: center;
 }
 
-.nav_to_login{
+.nav_to_login {
   margin-top: 3rem;
   text-align: center;
 }
-

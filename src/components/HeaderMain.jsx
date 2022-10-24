@@ -7,12 +7,12 @@ const HeaderMain = () => {
   const [theme] = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
-    <div className="headerMain" style={{ backgroundColor: theme }}>
+    <div className="header" style={{ backgroundColor: theme }}>
       <h1> Main</h1>
       <button
         onClick={() => navigate("/")}
         style={{ color: theme, borderColor: theme }}
-        className="mainBack"
+        className="back"
       >
         Back to Start
       </button>

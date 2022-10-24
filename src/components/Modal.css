@@ -15,16 +15,14 @@
 }
 
 #modal > div {
-  width: 15%;
-  background-color: white;
+  /* width: 25%; */
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.5rem;
   text-align: left;
   padding: 2rem;
   border-radius: 1rem;
   color: white;
-}
-#modal > div > button {
-  margin: auto;
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }

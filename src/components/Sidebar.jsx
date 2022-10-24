@@ -23,6 +23,7 @@ const Sidebar = () => {
       <Weather />
       <Quote />
       <button
+        className="sidebar_btn"
         onClick={() => navigate("/diary")}
         style={{
           color: theme,
@@ -31,9 +32,10 @@ const Sidebar = () => {
           border: `2px solid ${theme}`,
         }}
       >
-        Diary - click to enter
+        DIARY - Click to Enter
       </button>
       <button
+        className="sidebar_btn"
         onClick={() => navigate("/contact")}
         style={{
           color: theme,
@@ -42,7 +44,7 @@ const Sidebar = () => {
           borderRightColor: theme,
         }}
       >
-        Contacts - click to enter
+        CONTACTS - Click to Enter
       </button>
     </div>
   );

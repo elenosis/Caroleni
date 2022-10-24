@@ -1,33 +1,80 @@
-.cale_side{
+.cale_side {
   display: flex;
   flex-direction: row;
   position: relative;
+  height: 80vh;
 }
 
-.cale_button{
+.cale_button {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#add_new_event{
+.add_new_event {
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin: 0.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-size: 1rem;
+  background-color: rgb(232, 240, 254);
+  box-shadow: 5px 5px 5px rgb(40, 64, 105);
+  color: white;
+  width: 13rem;
+}
+.add_new_event:hover {
+  cursor: pointer;
+  color: rgb(40, 64, 105);
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
+}
+
+/* .popUp_new_event { */
+/* width: 500px;
+  height: 800px;
+  position: absolute;
+  left: 40%;
+  bottom: 40%;
+  z-index: 1; */
+/* } */
+
+.inputEvent {
+  width: 13rem;
+  padding: 0.5rem;
+  color: rgb(40, 64, 105);
+  cursor: pointer;
+  transition: 0.5s;
   font-size: 0.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  /* border-radius: 0.25rem; */
+  outline: none;
+}
+
+.datePicker {
+  width: 13rem;
+  padding: 0.5rem;
+  color: rgb(40, 64, 105);
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.modal_buttons {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1rem;
   background-color: rgb(232, 240, 254);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
-#add_new_event:hover{
+
+.modal_buttons:hover {
   cursor: pointer;
-  font-size: 0.9rem;
-}
-.popUp_new_event{
-  width: 20vw;
-position: absolute;
-left:40%;
-bottom:40%;
-z-index: 1;
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }

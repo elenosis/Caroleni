@@ -76,12 +76,14 @@ const Subscribe = () => {
             }}
           />
         </form>
-        <div className="nav_to_login">
+        <div className="nav_to_login" style={{ color: theme }}>
+          >
           <p>
-            Already a Caroleni member?
+            Already a Caroleni Member?
             <button
               onClick={handleClickLogin}
               style={{
+                color: theme,
                 border: "none",
                 backgroundColor: "white",
                 textDecoration: "underline",

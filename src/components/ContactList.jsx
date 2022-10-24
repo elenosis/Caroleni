@@ -4,6 +4,7 @@ import "./ContactList.css";
 import ContactItem from "./ContactItem";
 import { useContext, useState, useEffect } from "react";
 import ThemeContext from "../Contexts/ColorContext";
+// import Modal from "./components/Modal";
 
 const contactArray = [
   {
@@ -49,7 +50,7 @@ const ContactList = () => {
   const [inputMobilePhone, setInputMobilePhone] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputCity, setInputCity] = useState("");
-  const [inputImage, setInputImage] = useState("../images/Louisa.jpg");
+  const [inputImage, setInputImage] = useState("../images/Dummy.jpg");
   const [inputStreet, setInputStreet] = useState("");
   const [inputBirthday, setInputBirthday] = useState("");
   const [theme] = useContext(ThemeContext);
@@ -137,7 +138,11 @@ const ContactList = () => {
             <button
               onClick={handleAddNewContact}
               className="addContactButton"
-              style={{ color: theme, borderColor: theme }}
+              style={{
+                margin: "auto",
+                border: `2px solid transparent`,
+                backgroundColor: theme,
+              }}
             >
               Add new Contact
             </button>
@@ -152,7 +157,12 @@ const ContactList = () => {
             </h1>
             <div
               className="newContactBox"
-              style={{ border: `2px solid ${theme}` }}
+              style={{
+                backgroundColor: theme,
+                borderBottomColor: theme,
+                borderRightColor: theme,
+                border: `2px solid ${theme}`,
+              }}
             >
               <form onSubmit={handleSubmit}>
                 <div className="formContact">
@@ -232,7 +242,6 @@ const ContactList = () => {
                     style={{ border: `2px solid ${theme}` }}
                   />
                   <label htmlFor="input-Birthday" className="label">
-                    {" "}
                     🎂 Birthday:
                   </label>
                   <input
@@ -271,7 +280,7 @@ const ContactList = () => {
           </div>
         </div>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,11 +1,11 @@
 .containerContactList {
   height: 80vh;
 }
-.show{
+.show {
   display: none;
 }
 .contactBox {
-  margin: 2rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,11 +28,16 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  /* font-size: 0.8rem; */
   font-size: 1rem;
   background-color: rgb(232, 240, 254);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
+  color: white;
   width: 13rem;
+}
+.addContactButton:hover {
+  cursor: pointer;
+  color: rgb(40, 64, 105);
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }
 
 .formContact {
@@ -42,22 +47,26 @@
   align-items: center;
 }
 
+/* new Item Styling */
+
 .newContactBox {
   width: min-content;
   margin: auto;
   padding: 2.5rem 5rem;
   border-radius: 1rem;
+  /* background: linear-gradient(transparent, rgb(69, 109, 178)); */
   background: linear-gradient(rgb(69, 109, 178), transparent);
 }
 
 .label {
   padding: 0.5rem;
+  color: white;
 }
 
 .inputContact {
   width: 13rem;
   padding: 0.5rem;
-  color: rgb(6, 22, 73);
+  color: rgb(40, 64, 105);
   cursor: pointer;
   transition: 0.5s;
   font-size: 0.8rem;
@@ -79,8 +88,8 @@
 
 .submitContact:hover {
   color: rgb(40, 64, 105);
-  border: 2px solid rgb(69, 109, 178);
-  background-color: white;
+  cursor: pointer;
+  background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }
 
 #theme {

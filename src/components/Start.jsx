@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./grid.css";
+import "./Start.css";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
@@ -55,7 +55,7 @@ const Start = () => {
         <p>with</p>
         <h3>Caroleni</h3>
         <NavLink to="login" className={"navLink"}>
-          <button className="enter_caroleni_btn"> Click to start </button>
+          <button className="enter_caroleni_btn"> Click to Enter </button>
         </NavLink>
       </div>
 
@@ -128,7 +128,9 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         12
       </div>
-
+      {/* <div class="box" style={{ background: theme }}>
+        January
+      </div> */}
       <div class="box" style={{ background: theme }}>
         📒
       </div>
