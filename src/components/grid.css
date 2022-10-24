@@ -21,8 +21,10 @@
   text-align: center;
   color: white;
   border: 2px solid white ;
-  padding: 5%;
-/* background-color: rgba(0, 174, 255, 0.765); */
+  padding: 4.6rem;
+  padding-top: 6.3rem;/* background-color: rgba(0, 174, 255, 0.765); */
   position: absolute;
-  left:40%;
-bottom:40%}
+  left:41.8%;
+bottom:31%;
+margin: auto;
+}
