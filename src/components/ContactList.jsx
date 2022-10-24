@@ -4,7 +4,6 @@ import "./ContactList.css";
 import ContactItem from "./ContactItem";
 import { useContext, useState, useEffect } from "react";
 import ThemeContext from "../Contexts/ColorContext";
-// import Modal from "./components/Modal";
 
 const contactArray = [
   {

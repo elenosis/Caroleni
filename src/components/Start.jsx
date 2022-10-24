@@ -128,9 +128,7 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         12
       </div>
-      {/* <div class="box" style={{ background: theme }}>
-        January
-      </div> */}
+
       <div class="box" style={{ background: theme }}>
         📒
       </div>
