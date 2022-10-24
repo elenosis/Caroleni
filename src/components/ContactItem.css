@@ -3,6 +3,7 @@
   /* color: rgb(16, 50, 94); */
   border-radius: 0.5rem;
   margin: 1rem;
+  background: linear-gradient(rgb(69, 109, 178), transparent);
 }
 
 .item {
@@ -53,7 +54,6 @@
   background-color: rgb(232, 240, 254);
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
-
 
 .containerContactDetail {
   height: fit-content;
