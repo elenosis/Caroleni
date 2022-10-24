@@ -14,20 +14,19 @@
   /* background: rgba(0, 174, 255, 0.57); */
   text-align: center;
   grid-column: span 1;
-  height:80%
+  /* height:80% */
+}
+.span{
+  grid-row: span 3;
+  font-size: 1.5rem;
+  
+  margin: 20px 0px px 0px;
+  /* padding: 20px; */
+  /* padding-bottom: 10px; */
+
 }
 
-.enter_caroleni{
-  text-align: center;
-  color: white;
-  border: 2px solid white ;
-  padding: 4.6rem;
-  padding-top: 6.3rem;/* background-color: rgba(0, 174, 255, 0.765); */
-  position: absolute;
-  left:41.8%;
-bottom:31%;
-margin: auto;
-}
+
 
 .enter_caroleni_btn:hover{
   font-size: 0.7794rem;

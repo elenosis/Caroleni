@@ -2,14 +2,12 @@ import HeaderContact from "./HeaderContact";
 import Footer from "./Footer";
 import "./ContactList.css";
 import ContactItem from "./ContactItem";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import ThemeContext from "../Contexts/ColorContext";
-// import { uuid } from "uuidv4";
 // import Modal from "./components/Modal";
 
 const contactArray = [
   {
-    // id: "012lokhlh",
     firstname: "Hugo",
     lastname: "Alos",
     birthday: "15.10.1955",
@@ -21,7 +19,6 @@ const contactArray = [
     image: "../images/Hugo.jpg",
   },
   {
-    // id: "012lo",
     firstname: "Antonia",
     lastname: "Bertram",
     birthday: "15.10.2000",
@@ -33,7 +30,6 @@ const contactArray = [
     image: "../images/Antonia.jpg",
   },
   {
-    // id: "024sdkj",
     firstname: "Nils",
     lastname: "Holgerson",
     birthday: "15.10.1995",
@@ -54,15 +50,21 @@ const ContactList = () => {
   const [inputMobilePhone, setInputMobilePhone] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputCity, setInputCity] = useState("");
-  const [inputImage, setInputImage] = useState("");
+  const [inputImage, setInputImage] = useState("../images/Louisa.jpg");
   const [inputStreet, setInputStreet] = useState("");
   const [inputBirthday, setInputBirthday] = useState("");
   const [theme] = useContext(ThemeContext);
   const [showModalNewContact, setShowModalNewContact] = useState(false);
   const [show, setShow] = useState("");
 
+  useEffect(() => {
+    const contactsLocalStorage = localStorage.getItem("contacts");
+    if (contactsLocalStorage !== null) {
+      setContacts(JSON.parse(contactsLocalStorage));
+    }
+  }, []);
+
   const addNewContact = () => {
-    // const id = uuid();
     const newContact = {
       firstname: inputFirstname,
       lastname: inputLastname,
@@ -74,7 +76,9 @@ const ContactList = () => {
       email: inputEmail,
       image: inputImage,
     };
-    setContacts((prev) => [...prev, newContact]);
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
+    localStorage.setItem("contacts", JSON.stringify(newContacts));
   };
 
   const handleSubmit = (event) => {
@@ -88,6 +92,7 @@ const ContactList = () => {
     setInputCity("");
     setInputStreet("");
     setInputBirthday("");
+    setInputImage(inputImage);
   };
   const handleAddNewContact = () => {
     setShow("show");

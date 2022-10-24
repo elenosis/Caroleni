@@ -47,8 +47,16 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         September
       </div>
-      <div class="box" style={{ background: theme }}>
-        ✈️
+      <div
+        className="enter_caroleni box span"
+        style={{ backgroundColor: theme }}
+      >
+        <h1>Carpe Diem</h1>
+        <p>with</p>
+        <h3>Caroleni</h3>
+        <NavLink to="login" className={"navLink"}>
+          <button className="enter_caroleni_btn"> Click to start </button>
+        </NavLink>
       </div>
 
       <div class="box" style={{ background: theme }}>
@@ -78,7 +86,7 @@ const Start = () => {
         🪘
       </div>
       <div class="box" style={{ background: theme }}>
-        :)
+        🧑‍💻
       </div>
 
       <div class="box" style={{ background: theme }}>
@@ -120,29 +128,18 @@ const Start = () => {
       <div class="box" style={{ background: theme }}>
         12
       </div>
-      <div class="box" style={{ background: theme }}>
+      {/* <div class="box" style={{ background: theme }}>
         January
-      </div>
+      </div> */}
       <div class="box" style={{ background: theme }}>
         📒
       </div>
-      <div class="box" style={{ background: theme }}>
-        29
-      </div>
-      <div class="box" style={{ background: theme }}>
-        🧑‍💻
-      </div>
+
       <div class="box" style={{ background: theme }}>
         Monday
       </div>
-      <div className="enter_caroleni" style={{ backgroundColor: theme }}>
-        {/* <h3>Carpe Diem with Caroleni</h3> */}
-        <h1>Carpe Diem</h1>
-        <p>with</p>
-        <h3>Caroleni</h3>
-        <NavLink to="login" className={"navLink"}>
-          <button className="enter_caroleni_btn"> Click to start </button>
-        </NavLink>
+      <div class="box" style={{ background: theme }}>
+        :-P
       </div>
     </div>
   );
