@@ -14,7 +14,7 @@ const Contact = () => {
   const [inputStreet, setInputStreet] = useState("");
   const [inputBirthday, setInputBirthday] = useState("");
   const navigate = useNavigate();
-  const [theme, setTheme] = useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="show">
       <div>
         <h1 className="headerLogin" style={{ color: theme }}>
           New Contact
@@ -49,7 +49,6 @@ const Contact = () => {
                 value={inputFirstname}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-Lastname">Lastname: </label> */}
               <input
                 className="inputContact"
                 type="text"
@@ -61,7 +60,6 @@ const Contact = () => {
                 value={inputLastname}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-Phone">Phone: </label> */}
               <input
                 className="inputContact"
                 type="tel"
@@ -72,7 +70,6 @@ const Contact = () => {
                 value={inputPhone}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-Mobile">Mobile: </label> */}
               <input
                 className="inputContact"
                 type="tel"
@@ -83,7 +80,6 @@ const Contact = () => {
                 value={inputMobilePhone}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-Email">Email: </label> */}
               <input
                 className="inputContact"
                 type="email"
@@ -95,7 +91,6 @@ const Contact = () => {
                 value={inputEmail}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-City">City: </label> */}
               <input
                 className="inputContact"
                 type="text"
@@ -107,7 +102,6 @@ const Contact = () => {
                 value={inputCity}
                 style={{ border: `2px solid ${theme}` }}
               />
-              {/* <label htmlFor="input-Street">Street: </label> */}
               <input
                 className="inputContact"
                 type="text"

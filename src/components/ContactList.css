@@ -1,7 +1,9 @@
 .containerContactList {
   height: 80vh;
 }
-
+.show{
+  display: none;
+}
 .contactBox {
   margin: 2rem;
   display: flex;

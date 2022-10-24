@@ -141,7 +141,7 @@ const Start = () => {
         <p>with</p>
         <h3>Caroleni</h3>
         <NavLink to="login" className={"navLink"}>
-          <button> Click to start </button>
+          <button className="enter_caroleni_btn"> Click to start </button>
         </NavLink>
       </div>
     </div>

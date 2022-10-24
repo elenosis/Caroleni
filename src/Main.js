@@ -134,7 +134,15 @@ const Main = () => {
             />
             <div>
               <p>Description:</p>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
+              <input
+                type="text"
+                placeholder="Add description"
+                style={{ marginRight: "10px" }}
+                values={newEvent.description}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, description: e.target.value })
+                }
+              />
             </div>
             <div className="modal_buttons">
               <button style={{ marginTop: "10px" }} onClick={handleAddEvents}>

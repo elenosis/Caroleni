@@ -70,38 +70,38 @@ const ContactItem = (props) => {
             style={{ color: theme, borderColor: theme }}
           >
             <p>👤</p>
-            <p>Firstname {props.firstname} </p>
-            <p>Lastname {props.lastname}</p>
+            <p>Firstname: {props.firstname} </p>
+            <p>Lastname: {props.lastname}</p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>📞</p>
-            <p>Phone {props.phone}</p>
-            <p>Mobile {props.mobilePhone}</p>
+            <p>Phone: {props.phone}</p>
+            <p>Mobile: {props.mobilePhone}</p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🏙</p>
-            <p>City {props.city}</p>
-            <p>Street {props.street}</p>
+            <p>City: {props.city}</p>
+            <p>Street: {props.street}</p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>✉️</p>
-            <p>Email {props.email}</p>
+            <p>Email: {props.email}</p>
           </div>
           <div
             className="detailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🎂</p>
-            <p>Birthday {props.birthday}</p>
+            <p>Birthday: {props.birthday}</p>
           </div>
         </div>
       )}
