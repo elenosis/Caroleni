@@ -77,7 +77,6 @@ const Subscribe = () => {
           />
         </form>
         <div className="nav_to_login" style={{ color: theme }}>
-          >
           <p>
             Already a Caroleni Member?
             <button
