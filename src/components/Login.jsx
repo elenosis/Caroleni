@@ -19,6 +19,9 @@ const Login = () => {
   const [inputCity, setInputCity] = useState("");
   const [show, setShow] = useState(false);
 
+  const handleClickSubscribe = () => {
+    navigate("/subscribe");
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     setInputName("");
@@ -103,19 +106,21 @@ const Login = () => {
             style={{ border: `2px solid transparent`, backgroundColor: theme }}
           />
         </form>
-        {/* <p>
-          Not a Caroleni member?{" "}
-          <button
-            onClick={navigate("/subscribe")}
-            style={{
-              border: "none",
-              backgroundColor: "white",
-              textDecoration: "underline",
-            }}
-          >
-            <strong> Subscribe</strong>
-          </button>
-        </p> */}
+        <div className="nav_to_subscribe">
+          <p>
+            Not a Caroleni member?
+            <button
+              onClick={handleClickSubscribe}
+              style={{
+                border: "none",
+                backgroundColor: "white",
+                textDecoration: "underline",
+              }}
+            >
+              <strong> Subscribe</strong>
+            </button>
+          </p>
+        </div>
       </div>
       <Footer />
     </>

@@ -15,6 +15,9 @@ const Subscribe = () => {
   const [inputPassword, setInputPassword] = useState("");
   const [user, setUser] = useState({ email: "", username: "", password: "" });
 
+  const handleClickLogin = () => {
+    navigate("/login");
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     setUser({
@@ -22,10 +25,10 @@ const Subscribe = () => {
       username: inputName,
       password: inputPassword,
     });
-    // navigate("/Main");
+    alert("Thank you for subscribing in Caroleni!");
+    navigate("/Main");
     console.log(user);
   };
-
   return (
     <>
       <div className="container_subscribe">
@@ -73,17 +76,21 @@ const Subscribe = () => {
             }}
           />
         </form>
-        {/* <p>Already a Caroleni member? </p>
-        <button
-          onClick={navigate("/login")}
-          style={{
-            border: "none",
-            backgroundColor: "white",
-            textDecoration: "underline",
-          }}
-        >
-          <strong> Login</strong>
-        </button> */}
+        <div className="nav_to_login">
+          <p>
+            Already a Caroleni member?
+            <button
+              onClick={handleClickLogin}
+              style={{
+                border: "none",
+                backgroundColor: "white",
+                textDecoration: "underline",
+              }}
+            >
+              <strong> Login</strong>
+            </button>
+          </p>
+        </div>
       </div>
       <Footer />
     </>
