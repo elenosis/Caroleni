@@ -37,7 +37,10 @@ const DiaryItem = (props) => {
         <div className="dearDiary">
           <p>Dear Diary...</p>
         </div>
-        <div className={hide}>
+        <div
+          className={hide}
+          style={{ width: "fit-content", height: "1.5rem" }}
+        >
           <p>{props.text}</p>
         </div>
         <button

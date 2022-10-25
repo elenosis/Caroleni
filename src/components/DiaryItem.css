@@ -21,6 +21,7 @@
 }
 
 .diaryDate {
+  width:20rem;
   display: flex;
   justify-content: flex-start;
   font-size: 1.5rem;
@@ -61,6 +62,5 @@
 
 .hide {
   display: none;
-  width: fit-content;
-  height: 2rem;
+
 }

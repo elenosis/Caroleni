@@ -42,6 +42,7 @@ const DiaryList = () => {
       month: "short",
       year: "numeric",
     });
+    setDate(JSON.stringify(date));
     const newDiaryEntry = {
       date: JSON.stringify(date),
       mood: mood,
