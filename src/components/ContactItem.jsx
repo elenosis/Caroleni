@@ -90,9 +90,9 @@ const ContactItem = (props) => {
               <strong>Phone: </strong>
               {props.phone}
             </p>
-            <p>
+            {/* <p>
               <strong>Mobile:</strong> {props.mobilePhone}
-            </p>
+            </p> */}
           </div>
           <div
             className="detailRow"

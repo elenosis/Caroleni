@@ -35,7 +35,7 @@ const DiaryItem = (props) => {
           <p> {props.mood}</p>
         </div>
         <div className={hide}>
-          <p> {props.text}</p>
+          <p> Dear Diary...{props.text}</p>
         </div>
         <button
           onClick={handleShowDetails}

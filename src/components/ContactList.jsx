@@ -10,33 +10,33 @@ const contactArray = [
   {
     firstname: "Hugo",
     lastname: "Alos",
-    birthday: "15.10.1955",
+    birthday: "1955-10-15",
     city: "Hamburg",
     street: "Hansestrasse 5",
     phone: "+49 1234 56788",
-    mobile: "+49 1234 56788",
+    // mobile: "+49 1234 56788",
     email: "hugo.alos@gmail.com",
     image: "../images/Hugo.jpg",
   },
   {
     firstname: "Antonia",
     lastname: "Bertram",
-    birthday: "15.10.2000",
+    birthday: "2000-11-15",
     city: "Berlin",
     street: "Niemetzstrassse 27",
     phone: "+49 1234 56788",
-    mobile: "+49 1234 56788",
+    // mobile: "+49 1234 56788",
     email: "antonia.bertram@gmail.com",
     image: "../images/Antonia.jpg",
   },
   {
     firstname: "Nils",
     lastname: "Holgerson",
-    birthday: "15.10.1995",
+    birthday: "1995-10-20",
     city: "Köln",
     street: "Rheinstrasse 75",
     phone: "+49 1234 56788",
-    mobile: "+49 1234 56788",
+    // mobile: "+49 1234 56788",
     email: "nils.holgerson@gmail.com",
     image: "../images/Nils.jpg",
   },
@@ -47,7 +47,7 @@ const ContactList = () => {
   const [inputFirstname, setInputFirstname] = useState("");
   const [inputLastname, setInputLastname] = useState("");
   const [inputPhone, setInputPhone] = useState("");
-  const [inputMobilePhone, setInputMobilePhone] = useState("");
+  // const [inputMobilePhone, setInputMobilePhone] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputCity, setInputCity] = useState("");
   const [inputImage, setInputImage] = useState("../images/Dummy.jpg");
@@ -72,7 +72,7 @@ const ContactList = () => {
       city: inputCity,
       street: inputStreet,
       phone: inputPhone,
-      mobile: inputMobilePhone,
+      // mobile: inputMobilePhone,
       email: inputEmail,
       image: inputImage,
     };
@@ -87,7 +87,7 @@ const ContactList = () => {
     setInputFirstname("");
     setInputLastname("");
     setInputPhone("");
-    setInputMobilePhone("");
+    // setInputMobilePhone("");
     setInputEmail("");
     setInputCity("");
     setInputStreet("");
@@ -113,7 +113,7 @@ const ContactList = () => {
           lastname={contact.lastname}
           birthday={contact.birthday}
           phone={contact.phone}
-          mobile={contact.mobile}
+          // mobile={contact.mobile}
           city={contact.city}
           street={contact.street}
           email={contact.email}
@@ -199,7 +199,7 @@ const ContactList = () => {
                     value={inputPhone}
                     style={{ border: `2px solid ${theme}` }}
                   />
-                  <input
+                  {/* <input
                     className="inputContact"
                     type="tel"
                     id="input-mobilePhone"
@@ -208,7 +208,7 @@ const ContactList = () => {
                     onChange={(event) => setInputPhone(event.target.value)}
                     value={inputMobilePhone}
                     style={{ border: `2px solid ${theme}` }}
-                  />
+                  /> */}
                   <input
                     className="inputContact"
                     type="email"
