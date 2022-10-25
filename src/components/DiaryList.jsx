@@ -7,8 +7,13 @@ import ThemeContext from "../Contexts/ColorContext";
 import CurrentDate from "./CurrentDate";
 
 const DiaryList = () => {
+  const date1 = new Date().toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
   const [diaryEntries, setDiaryEntries] = useState([]);
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(JSON.stringify(date1));
   const [mood, setMood] = useState("");
   const [diaryEntry, setDiaryEntry] = useState("");
   const [showModalNewEntry, setShowModalNewEntry] = useState(false);
@@ -35,16 +40,10 @@ const DiaryList = () => {
   };
 
   const handleSubmitNewEntry = (e) => {
-    // const date = new Date();
+    setDate(JSON.stringify(date1));
 
-    const date = new Date().toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-    setDate(JSON.stringify(date));
     const newDiaryEntry = {
-      date: JSON.stringify(date),
+      date: date,
       mood: mood,
       text: diaryEntry,
     };
@@ -52,6 +51,7 @@ const DiaryList = () => {
     e.preventDefault();
     addNewDiaryEntry();
     setDiaryEntries(newEntries);
+    setDiaryEntry("");
   };
   const handleChangeTextarea = (e) => {
     setDiaryEntry(e.target.value);
@@ -64,6 +64,7 @@ const DiaryList = () => {
 
   const handleReject = () => {
     setShow("");
+    setDiaryEntry("");
     setShowModalNewEntry(false);
   };
 
