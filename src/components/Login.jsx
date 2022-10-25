@@ -6,7 +6,7 @@ import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
 const Login = () => {
-  const [inputCity, setInputCity] = "";
+  const [inputCity, setInputCity] = useState("");
   const [theme, setTheme] = useContext(ThemeContext);
   const navigate = useNavigate();
   const [data, setData] = useState({
