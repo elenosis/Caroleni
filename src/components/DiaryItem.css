@@ -3,7 +3,6 @@
 }
 
 .containerDiaryItem {
-  border: 2px solid orange;
   width: 80vw;
   border-radius: 0.5rem;
   margin: 1rem;
@@ -21,19 +20,29 @@
   box-shadow: 5px 5px 5px rgb(40, 64, 105);
 }
 
-.diaryDate,
-.diaryMood {
-  border: 2px solid yellow;
+.diaryDate {
   display: flex;
+  justify-content: flex-start;
   font-size: 1.5rem;
   margin: 0;
-  margin-left: 1rem;
-  padding: 1rem;
-  align-items: center;
+  margin-left: 2rem;
+}
+
+.diaryMood {
+  font-size: 3rem;
+}
+
+.diaryMood > p {
+  margin: 0;
+  padding-top: 0.75rem;
+}
+.dearDiary > p {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .moreContentButton {
-  margin: 2.5rem;
+  margin: 1rem;
   padding: 0 1rem;
   border-radius: 0.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -50,34 +59,8 @@
   background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }
 
-.hide{
-  display:none;
+.hide {
+  display: none;
   width: fit-content;
   height: 2rem;
 }
-/* .containerContactDetail {
-  height: fit-content;
-  width: fit-content;
-  color: rgb(16, 50, 94);
-  margin: auto;
-  padding: 2rem;
-  margin-top: 1rem;
-  border-radius: 1rem;
-}
-
-.detailRow {
-  margin: auto;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: start;
-  width: 40vw;
-  height: 5vh;
-  padding: 1rem;
-  background-color: rgb(232, 240, 254);
-  border-radius: 1rem;
-  box-shadow: 5px 5px 5px rgb(40, 64, 105);
-}
-
-.detailRow > p {
-  padding-right: 2rem;
-} */

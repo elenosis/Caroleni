@@ -122,9 +122,9 @@ const DiaryList = () => {
                 </div>
                 <h3>How do you feel today?</h3>
                 <div className="how_do_you_feel" onChange={onChangeValue}>
-                  <input type="radio" value="lila" id="😔" name="mood" />
+                  <input type="radio" value="😔" id="😔" name="mood" />
                   😔
-                  <input type="radio" value="maria" id="😡" name="mood" />
+                  <input type="radio" value="😡" id="😡" name="mood" />
                   😡
                   <input type="radio" value="😐" id="😐" name="mood" />
                   😐
@@ -164,7 +164,7 @@ const DiaryList = () => {
                     }}
                     onClick={handleReject}
                   >
-                    Reject
+                    Close
                   </button>
                 </div>
               </form>

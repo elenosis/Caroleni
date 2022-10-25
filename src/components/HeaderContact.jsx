@@ -8,7 +8,7 @@ const HeaderContact = () => {
   const navigate = useNavigate();
   return (
     <div className="header" style={{ backgroundColor: theme }}>
-      <h1>Contact-List</h1>
+      <h1>Contact</h1>
       <button
         onClick={() => navigate("/main")}
         className="back"

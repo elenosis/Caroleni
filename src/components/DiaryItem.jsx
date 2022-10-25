@@ -34,8 +34,11 @@ const DiaryItem = (props) => {
         <div className="diaryMood">
           <p> {props.mood}</p>
         </div>
+        <div className="dearDiary">
+          <p>Dear Diary...</p>
+        </div>
         <div className={hide}>
-          <p> Dear Diary...{props.text}</p>
+          <p>{props.text}</p>
         </div>
         <button
           onClick={handleShowDetails}

@@ -8,7 +8,7 @@ const HeaderDiary = () => {
   const navigate = useNavigate();
   return (
     <div className="header" style={{ backgroundColor: theme }}>
-      <h1>Diary-List</h1>
+      <h1>Diary</h1>
       <button
         onClick={() => navigate("/main")}
         className="back"
