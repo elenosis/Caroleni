@@ -49,7 +49,7 @@ const events = [
 ];
 console.log(new Date());
 
-const Main = ({inputCity}) => {
+const Main = ({ city }) => {
   const [theme] = useContext(ThemeContext);
   const handleCancel = () => {
     setShowModal(false);
@@ -70,7 +70,7 @@ const Main = ({inputCity}) => {
   const [showModal, setShowModal] = useState(false);
   const [zIndex, setZIndex] = useState(1);
 
-  const handleClick = ({ inputCity }) => {
+  const handleClick = () => {
     setShowModal(true);
     setZIndex(-1);
     setNewEvent({});
@@ -179,7 +179,7 @@ const Main = ({inputCity}) => {
             </div>
           </Modal>
         ) : null}
-        <Sidebar inputCity={inputCity} />
+        <Sidebar city={city} />
       </div>
       <Footer />
     </div>

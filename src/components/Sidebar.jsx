@@ -7,7 +7,8 @@ import Weekend from "./Weekend";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
-const Sidebar = () => {
+const Sidebar = ({ city }) => {
+  console.log(city);
   const [theme] = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
@@ -20,7 +21,7 @@ const Sidebar = () => {
     >
       <CurrentDate />
       <Weekend />
-      <Weather />
+      <Weather city={city} />
       <Quote />
       <button
         className="sidebar_btn"

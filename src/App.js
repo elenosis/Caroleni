@@ -11,6 +11,10 @@ import ThemeContext from "./Contexts/ColorContext";
 import Subscribe from "./components/Subscribe";
 
 const App = () => {
+  const [city, setCity] = useState("leipzig");
+  const chooseCity = (city) => {
+    setCity(city);
+  };
 
   const theme = useState("#6699CC");
 
@@ -19,14 +23,9 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Start />} />
-          <Route
-            path="login"
-            element={
-              <Login />
-            }
-          />
+          <Route path="login" element={<Login chooseCity={chooseCity} />} />
           <Route path="subscribe" element={<Subscribe />} />
-          <Route path="main" element={<Main />} />
+          <Route path="main" element={<Main city={city} />} />
           <Route path="diary" element={<DiaryList />} />
           <Route path="contact" element={<ContactList />} />
         </Routes>

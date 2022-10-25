@@ -5,12 +5,12 @@ import { useContext } from "react";
 
 const MY_KEY = "866470bfa7b122c147a6ef7230d9f2b3";
 
-const Weather = () => {
+const Weather = ({ city }) => {
   const [theme] = useContext(ThemeContext);
   const [weather, setWeather] = useState({});
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=berlin&appid=${MY_KEY}&units=metric&lang=en`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${MY_KEY}&units=metric&lang=en`
     )
       .then((response) => response.json())
       .then((data) => {

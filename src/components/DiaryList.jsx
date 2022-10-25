@@ -15,7 +15,6 @@ const DiaryList = () => {
   const [show, setShow] = useState("");
   const [theme] = useContext(ThemeContext);
 
-  // neu
   // useEffect(() => {
   //   const diaryLocalStorage = localStorage.getItem("diaryEntries");
   //   if (diaryLocalStorage !== null) {
@@ -35,7 +34,7 @@ const DiaryList = () => {
   //   localStorage.setItem("diaryEntries", JSON.stringify(newDiaryEntries));
   // };
 
-  //  //
+  //
 
   const handleSubmitNewEntry = (e) => {
     const date = new Date();

@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
-const Login = () => {
+const Login = ({ chooseCity }) => {
   const [inputCity, setInputCity] = useState("");
   const [theme, setTheme] = useContext(ThemeContext);
   const navigate = useNavigate();
@@ -22,6 +22,11 @@ const Login = () => {
   const handleClickSubscribe = () => {
     navigate("/subscribe");
   };
+  const handleNewCity = (event) => {
+    setInputCity(event.target.value);
+    chooseCity(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setInputName("");
@@ -69,7 +74,7 @@ const Login = () => {
             type="text"
             name="city"
             placeholder="City"
-            onChange={(event) => setInputCity(event.target.value)}
+            onChange={handleNewCity}
             value={inputCity}
             style={{ border: `2px solid ${theme}` }}
           />
