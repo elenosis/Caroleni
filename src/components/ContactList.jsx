@@ -72,7 +72,6 @@ const ContactList = () => {
       city: inputCity,
       street: inputStreet,
       phone: inputPhone,
-      // mobile: inputMobilePhone,
       email: inputEmail,
       image: inputImage,
     };

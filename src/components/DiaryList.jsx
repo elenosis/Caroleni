@@ -8,38 +8,36 @@ import CurrentDate from "./CurrentDate";
 
 const DiaryList = () => {
   const [diaryEntries, setDiaryEntries] = useState([]);
-
+  const [date, setDate] = useState("");
   const [mood, setMood] = useState("");
   const [diaryEntry, setDiaryEntry] = useState("");
   const [showModalNewEntry, setShowModalNewEntry] = useState(false);
   const [show, setShow] = useState("");
   const [theme] = useContext(ThemeContext);
 
-  // useEffect(() => {
-  //   const diaryLocalStorage = localStorage.getItem("diaryEntries");
-  //   if (diaryLocalStorage !== null) {
-  //     setDiaryEntries(JSON.parse(diaryLocalStorage));
-  //   }
-  // }, []);
+  useEffect(() => {
+    const diaryLocalStorage = localStorage.getItem("diaryEntries");
+    if (diaryLocalStorage !== null) {
+      setDiaryEntries(JSON.parse(diaryLocalStorage));
+    }
+  }, []);
 
-  // const addNewDiaryEntry = () => {
-  //   const newDiaryEntry = {
-  //     date: inputDate,
-  //     mood: setMood,
-  //     text: diaryEntry,
-  //   };
+  const addNewDiaryEntry = () => {
+    const newDiaryEntry = {
+      date: date,
+      mood: mood,
+      text: diaryEntry,
+    };
 
-  //   const newDiaryEnties = [...diaryEntries, newDiaryEntry];
-  //   setDiaryEntries(newDiaryEntry);
-  //   localStorage.setItem("diaryEntries", JSON.stringify(newDiaryEntries));
-  // };
-
-  //
+    const newDiaryEntries = [...diaryEntries, newDiaryEntry];
+    setDiaryEntries(newDiaryEntries);
+    localStorage.setItem("diaryEntries", JSON.stringify(newDiaryEntries));
+  };
 
   const handleSubmitNewEntry = (e) => {
-    const date = new Date();
+    // const date = new Date();
 
-    date.toLocaleDateString("en-GB", {
+    const date = new Date().toLocaleDateString("en-GB", {
       day: "numeric",
       month: "short",
       year: "numeric",
@@ -51,6 +49,7 @@ const DiaryList = () => {
     };
     const newEntries = [...diaryEntries, newDiaryEntry];
     e.preventDefault();
+    addNewDiaryEntry();
     setDiaryEntries(newEntries);
   };
   const handleChangeTextarea = (e) => {
