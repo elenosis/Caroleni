@@ -107,7 +107,6 @@ const ContactList = () => {
   let content;
   if (contactArray.length > 0) {
     content = contacts.map((contact) => {
-      console.log(contact.birthday);
       return (
         <ContactItem
           firstname={contact.firstname}
@@ -123,7 +122,7 @@ const ContactList = () => {
       );
     });
   } else {
-    content = <h2>No contact available</h2>;
+    content = <h1 style={{ color: theme }}>No contact available</h1>;
   }
 
   return (
@@ -149,6 +148,7 @@ const ContactList = () => {
           </div>
         </div>
       </div>
+      {/* Input New Contact */}
       {showModalNewContact && (
         <div>
           <div>

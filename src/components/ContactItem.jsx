@@ -58,6 +58,7 @@ const ContactItem = (props) => {
           {btnText}
         </button>
       </div>
+      {/*  Contact Detail */}
       {showModalDetails && (
         <div
           className="containerContactDetail "
@@ -132,4 +133,3 @@ const ContactItem = (props) => {
 };
 
 export default ContactItem;
-<strong></strong>;
