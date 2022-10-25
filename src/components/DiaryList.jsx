@@ -110,9 +110,6 @@ const DiaryList = () => {
       {showModalNewEntry && (
         <div>
           <div>
-            {/* <h2 className="headerNewEntry" style={{ color: theme }}>
-              New Diary Entry
-            </h2> */}
             <div
               className="diary_new_entry"
               style={{

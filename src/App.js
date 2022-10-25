@@ -11,6 +11,7 @@ import ThemeContext from "./Contexts/ColorContext";
 import Subscribe from "./components/Subscribe";
 
 const App = () => {
+
   const theme = useState("#6699CC");
 
   return (
@@ -18,7 +19,12 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Start />} />
-          <Route path="login" element={<Login />} />
+          <Route
+            path="login"
+            element={
+              <Login />
+            }
+          />
           <Route path="subscribe" element={<Subscribe />} />
           <Route path="main" element={<Main />} />
           <Route path="diary" element={<DiaryList />} />

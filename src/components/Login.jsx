@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
-const Login = () => {
+const Login = ({ inputCity, setInputCity }) => {
   const [theme, setTheme] = useContext(ThemeContext);
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -16,7 +16,6 @@ const Login = () => {
 
   const [inputName, setInputName] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const [inputCity, setInputCity] = useState("");
   const [show, setShow] = useState(false);
 
   const handleClickSubscribe = () => {

@@ -57,6 +57,7 @@
   color: rgb(40, 64, 105);
   cursor: pointer;
   outline: none;
+  border: none;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }

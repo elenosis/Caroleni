@@ -49,7 +49,7 @@ const events = [
 ];
 console.log(new Date());
 
-const Main = () => {
+const Main = ({inputCity}) => {
   const [theme] = useContext(ThemeContext);
   const handleCancel = () => {
     setShowModal(false);
@@ -70,9 +70,10 @@ const Main = () => {
   const [showModal, setShowModal] = useState(false);
   const [zIndex, setZIndex] = useState(1);
 
-  const handleClick = () => {
+  const handleClick = ({ inputCity }) => {
     setShowModal(true);
     setZIndex(-1);
+    setNewEvent({});
   };
 
   return (
@@ -96,13 +97,6 @@ const Main = () => {
           <button
             className="add_new_event"
             onClick={handleClick}
-            // style={{
-            //   margin: "auto",
-            //   color: theme,
-            //   border: `2px solid ${theme}`,
-            //   borderBottomColor: theme,
-            //   borderRightColor: theme,
-            // }}
             style={{
               margin: "auto",
               border: `2px solid transparent`,
@@ -119,8 +113,8 @@ const Main = () => {
                 className="inputEvent"
                 type="text"
                 placeholder="Add event title"
-                values={newEvent.title}
-                style={{ border: `2px solid ${theme}` }}
+                value={newEvent.title}
+                style={{ border: "none" }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, title: e.target.value })
                 }
@@ -151,7 +145,7 @@ const Main = () => {
                 name="comment"
                 placeholder="Add description"
                 values={newEvent.description}
-                style={{ border: `2px solid ${theme}` }}
+                style={{ border: `none` }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, description: e.target.value })
                 }
@@ -185,7 +179,7 @@ const Main = () => {
             </div>
           </Modal>
         ) : null}
-        <Sidebar />
+        <Sidebar inputCity={inputCity} />
       </div>
       <Footer />
     </div>

@@ -4,11 +4,11 @@ const daysLeft = 5 - weekday;
 
 const Weekend = () => {
   if (weekday === 0 || weekday === 6) {
-    return <p>🎉 Enjoy your weekend! 🥳 </p>;
+    return <strong>🎉 Enjoy your weekend! 🥳 </strong>;
   } else if (weekday === 5) {
-    return <p> 🔜 The weekend starts tonight! 🔜</p>;
+    return <strong> 🔜 The weekend starts tonight! 🔜</strong>;
   } else {
-    return <p>Only {daysLeft} days left until weekend!</p>;
+    return <strong>Only {daysLeft} days left until weekend!</strong>;
   }
 };
 
