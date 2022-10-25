@@ -7,8 +7,7 @@ import ThemeContext from "../Contexts/ColorContext";
 import CurrentDate from "./CurrentDate";
 
 const DiaryList = () => {
-  const diaryArray = [];
-  const [diaryEntries, setDiaryEntries] = useState(diaryArray);
+  const [diaryEntries, setDiaryEntries] = useState([]);
 
   const [mood, setMood] = useState("");
   const [diaryEntry, setDiaryEntry] = useState("");

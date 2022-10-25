@@ -105,7 +105,7 @@ const ContactList = () => {
   };
 
   let content;
-  if (contactArray.length > 0) {
+  if (contacts.length > 0) {
     content = contacts.map((contact) => {
       return (
         <ContactItem
