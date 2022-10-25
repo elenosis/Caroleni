@@ -9,6 +9,7 @@ import CurrentDate from "./CurrentDate";
 const DiaryList = () => {
   const diaryArray = [];
   const [diaryEntries, setDiaryEntries] = useState(diaryArray);
+
   const [mood, setMood] = useState("");
   const [diaryEntry, setDiaryEntry] = useState("");
   const [showModalNewEntry, setShowModalNewEntry] = useState(false);
@@ -36,32 +37,47 @@ const DiaryList = () => {
   // };
 
   //  //
-  const handleChangeTextarea = () => {};
-  //
-  //
+
+  const handleSubmitNewEntry = (e) => {
+    const date = new Date();
+
+    date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+    const newDiaryEntry = {
+      date: JSON.stringify(date),
+      mood: mood,
+      text: diaryEntry,
+    };
+    const newEntries = [...diaryEntries, newDiaryEntry];
+    e.preventDefault();
+    setDiaryEntries(newEntries);
+  };
+  const handleChangeTextarea = (e) => {
+    setDiaryEntry(e.target.value);
+  };
+
   const handleNewDiary = () => {
     setShow("show");
     setShowModalNewEntry(true);
   };
+
   const handleReject = () => {
     setShow("");
     setShowModalNewEntry(false);
   };
-  //
-  //
+
   const onChangeValue = (event) => {
     setMood(event.target.value);
   };
   //
   let contentDiary;
-  if (diaryArray.length > 0) {
+  if (diaryEntries.length > 0) {
     contentDiary = diaryEntries.map((entry) => {
       return (
-        <DiaryItem
-          // date={entry.date}
-          mood={entry.mood}
-          text={entry.text}
-        />
+        <DiaryItem date={entry.date} mood={entry.mood} text={entry.text} />
       );
     });
   } else {
@@ -94,9 +110,9 @@ const DiaryList = () => {
       {showModalNewEntry && (
         <div>
           <div>
-            <h2 className="headerNewEntry" style={{ color: theme }}>
+            {/* <h2 className="headerNewEntry" style={{ color: theme }}>
               New Diary Entry
-            </h2>
+            </h2> */}
             <div
               className="diary_new_entry"
               style={{
@@ -106,7 +122,7 @@ const DiaryList = () => {
                 border: `2px solid ${theme}`,
               }}
             >
-              <form>
+              <form onSubmit={handleSubmitNewEntry}>
                 <div>
                   <CurrentDate />
                 </div>
@@ -129,7 +145,7 @@ const DiaryList = () => {
                   cols="40"
                   rows="15"
                   placeholder="Dear Diary..."
-                  value=""
+                  value={diaryEntry}
                   onChange={handleChangeTextarea}
                 ></textarea>
                 <div className="diary_btns">

@@ -4,14 +4,14 @@ import ThemeContext from "../Contexts/ColorContext";
 import { useContext } from "react";
 
 const DiaryItem = (props) => {
+  const [hide, setHide] = useState("hide");
   const [theme] = useContext(ThemeContext);
   const [showModalDetails, setShowModalDetails] = useState(false);
-  const [btnText, setBtnText] = useState("View more Content");
+  const [btnText, setBtnText] = useState("View more");
 
   const handleShowDetails = () => {
-    btnText === "View more Details"
-      ? setBtnText("Close")
-      : setBtnText("View more Content");
+    btnText === "View more" ? setBtnText("Close") : setBtnText("View more");
+    hide === "hide" ? setHide("") : setHide("hide");
     showModalDetails === true
       ? setShowModalDetails(false)
       : setShowModalDetails(true);
@@ -29,13 +29,13 @@ const DiaryItem = (props) => {
     >
       <div className="diaryItem" style={{ color: theme, borderColor: theme }}>
         <div className="diaryDate">
-          <p>Date</p>
+          <p>{props.date}</p>
         </div>
         <div className="diaryMood">
-          <p> Mood</p>
+          <p> {props.mood}</p>
         </div>
-        <div className="diaryContent">
-          <p> Content</p>
+        <div className={hide}>
+          <p> {props.text}</p>
         </div>
         <button
           onClick={handleShowDetails}

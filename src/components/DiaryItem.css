@@ -32,11 +32,6 @@
   align-items: center;
 }
 
-.diaryContent {
-  width: fit-content;
-  height: 2rem;
-}
-
 .moreContentButton {
   margin: 2.5rem;
   padding: 0 1rem;
@@ -55,6 +50,11 @@
   background: linear-gradient(transparent, rgb(255, 255, 255), transparent);
 }
 
+.hide{
+  display:none;
+  width: fit-content;
+  height: 2rem;
+}
 /* .containerContactDetail {
   height: fit-content;
   width: fit-content;
