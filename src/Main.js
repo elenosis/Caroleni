@@ -5,7 +5,7 @@ import format from "date-fns/format";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import HeaderMain from "./components/HeaderMain";
@@ -14,7 +14,6 @@ import Modal from "./components/Modal";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
 import Footer from "./components/Footer";
-import { useContext } from "react";
 import ThemeContext from "./Contexts/ColorContext";
 
 const locales = {
@@ -47,19 +46,8 @@ const events = [
     end: new Date(2022, 10, 31),
   },
 ];
-console.log(new Date());
 
 const Main = ({ city }) => {
-  const [theme] = useContext(ThemeContext);
-  const handleCancel = () => {
-    setShowModal(false);
-    setZIndex(1);
-  };
-  function handleAddEvents() {
-    setAllEvents([...allEvents, newEvent]);
-    setShowModal(false);
-    setZIndex(1);
-  }
   const [newEvent, setNewEvent] = useState({
     title: "",
     start: "",
@@ -69,6 +57,25 @@ const Main = ({ city }) => {
   const [allEvents, setAllEvents] = useState(events);
   const [showModal, setShowModal] = useState(false);
   const [zIndex, setZIndex] = useState(1);
+
+  useEffect(() => {
+    const eventsLocalStorage = localStorage.getItem("allEvents");
+    if (eventsLocalStorage !== null) {
+      setAllEvents(JSON.parse(eventsLocalStorage));
+    }
+  }, []);
+
+  const [theme] = useContext(ThemeContext);
+  const handleCancel = () => {
+    setShowModal(false);
+    setZIndex(1);
+  };
+  function handleAddEvents() {
+    setAllEvents([...allEvents, newEvent]);
+    localStorage.setItem("allEvents", JSON.stringify(allEvents));
+    setShowModal(false);
+    setZIndex(1);
+  }
 
   const handleClick = () => {
     setShowModal(true);

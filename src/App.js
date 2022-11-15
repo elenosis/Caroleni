@@ -11,7 +11,7 @@ import ThemeContext from "./Contexts/ColorContext";
 import Subscribe from "./components/Subscribe";
 
 const App = () => {
-  const [city, setCity] = useState("leipzig");
+  const [city, setCity] = useState("europe");
   const chooseCity = (city) => {
     setCity(city);
   };
