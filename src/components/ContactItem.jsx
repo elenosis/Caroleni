@@ -1,9 +1,5 @@
-import "./ContactItem.css";
-// import Hugo from "../images/Hugo.jpg";
 import { useState } from "react";
-// import { useNavigate, } from "react-router-dom";
 import ThemeContext from "../Contexts/ColorContext";
-
 import { useContext } from "react";
 
 const ContactItem = (props) => {
@@ -22,18 +18,18 @@ const ContactItem = (props) => {
 
   return (
     <div
-      className="containerContactItem"
+      className="contactContainerItem"
       style={{
         backgroundColor: theme,
-        borderBottomColor: theme,
-        borderRightColor: theme,
-        border: `2px solid ${theme}`,
+        // borderBottomColor: theme,
+        // borderRightColor: theme,
+        // border: `2px solid ${theme}`,
       }}
     >
-      <div className="item" style={{ color: theme, borderColor: theme }}>
+      <div className="contactItem" style={{ color: theme }}>
         <div className="contactImg">
           <img
-            className="picture"
+            className="contactPicture"
             src={props.image}
             alt={props.firstname}
             width="100"
@@ -48,12 +44,11 @@ const ContactItem = (props) => {
           <p> 🎂 Birthday: {props.birthday}</p>
         </div>
         <button
-          onClick={handleShowDetails}
-          className="moreDetailButton"
+          className="contactMoreDetailButton"
           style={{
-            border: `2px solid transparent`,
             backgroundColor: theme,
           }}
+          onClick={handleShowDetails}
         >
           {btnText}
         </button>
@@ -61,16 +56,16 @@ const ContactItem = (props) => {
       {/*  Contact Detail */}
       {showModalDetails && (
         <div
-          className="containerContactDetail "
+          className="contactContainerDetail "
           style={{
             backgroundColor: theme,
-            borderBottomColor: theme,
-            borderRightColor: theme,
-            border: `2px solid ${theme}`,
+            // borderBottomColor: theme,
+            // borderRightColor: theme,
+            // border: `2px solid ${theme}`,
           }}
         >
           <div
-            className="detailRow"
+            className="contactDetailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>👤</p>
@@ -82,7 +77,7 @@ const ContactItem = (props) => {
             </p>
           </div>
           <div
-            className="detailRow"
+            className="contactDetailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>📞</p>
@@ -90,12 +85,9 @@ const ContactItem = (props) => {
               <strong>Phone: </strong>
               {props.phone}
             </p>
-            {/* <p>
-              <strong>Mobile:</strong> {props.mobilePhone}
-            </p> */}
           </div>
           <div
-            className="detailRow"
+            className="contactDetailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🏙</p>
@@ -108,7 +100,7 @@ const ContactItem = (props) => {
             </p>
           </div>
           <div
-            className="detailRow"
+            className="contactDetailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>✉️</p>
@@ -117,7 +109,7 @@ const ContactItem = (props) => {
             </p>
           </div>
           <div
-            className="detailRow"
+            className="contactDetailRow"
             style={{ color: theme, borderColor: theme }}
           >
             <p>🎂</p>

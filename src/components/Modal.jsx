@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import "./Modal.css";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 

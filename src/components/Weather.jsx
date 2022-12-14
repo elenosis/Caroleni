@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./Weather.css";
 import ThemeContext from "../Contexts/ColorContext";
 import { useContext } from "react";
 
@@ -27,7 +26,7 @@ const Weather = ({ city }) => {
   const imgSrc = `http://openweathermap.org/img/w/${weather.icon}.png`;
   return (
     <div
-      className="weatherCard"
+      className="weatherSidebarMain"
       style={{
         border: `2px solid ${theme}`,
         borderRightColor: theme,

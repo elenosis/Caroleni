@@ -1,4 +1,4 @@
-import "./HeaderMain.css";
+// import "./HeaderMain.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
@@ -10,9 +10,9 @@ const HeaderMain = () => {
     <div className="header" style={{ backgroundColor: theme }}>
       <h1> Main</h1>
       <button
+        className="backButton"
+        style={{ backgroundColor: theme }}
         onClick={() => navigate("/")}
-        style={{ color: theme, borderColor: theme }}
-        className="back"
       >
         Back to Start
       </button>

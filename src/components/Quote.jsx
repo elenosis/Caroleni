@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Quote.css";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
 
@@ -35,7 +34,7 @@ const Quote = () => {
 
   return (
     <div
-      className="quoteCard"
+      className="quoteSidebarMain"
       style={{
         border: `2px solid ${theme}`,
         borderRightColor: theme,
@@ -43,7 +42,7 @@ const Quote = () => {
         color: theme,
       }}
     >
-      <h3>Quote of the day:</h3>
+      <h3>Inspiration for the day:</h3>
       <p>"{quote.text}"</p>
       <p>~ {quote.author} ~</p>
     </div>

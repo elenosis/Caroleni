@@ -1,7 +1,6 @@
 import Quote from "./Quote";
 import Weather from "./Weather";
 import { useNavigate } from "react-router-dom";
-import "./Sidebar.css";
 import CurrentDate from "./CurrentDate";
 import Weekend from "./Weekend";
 import { useContext } from "react";
@@ -24,26 +23,20 @@ const Sidebar = ({ city }) => {
       <Weather city={city} />
       <Quote />
       <button
-        className="sidebar_btn"
-        onClick={() => navigate("/diary")}
+        className="sidebarButton"
         style={{
-          color: theme,
-          borderBottomColor: theme,
-          borderRightColor: theme,
-          border: `2px solid ${theme}`,
+          backgroundColor: theme,
         }}
+        onClick={() => navigate("/diary")}
       >
         DIARY - Click to Enter
       </button>
       <button
-        className="sidebar_btn"
-        onClick={() => navigate("/contact")}
+        className="sidebarButton"
         style={{
-          color: theme,
-          border: `2px solid ${theme}`,
-          borderBottomColor: theme,
-          borderRightColor: theme,
+          backgroundColor: theme,
         }}
+        onClick={() => navigate("/contact")}
       >
         CONTACTS - Click to Enter
       </button>

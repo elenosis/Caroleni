@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
 import Footer from "./Footer";
 import { useContext } from "react";
 import ThemeContext from "../Contexts/ColorContext";
-import "./Subscribe.css";
 
 const Subscribe = () => {
   const [theme] = useContext(ThemeContext);
@@ -31,15 +29,15 @@ const Subscribe = () => {
   };
   return (
     <>
-      <div className="container_subscribe">
-        <h1 className="headerLogin" style={{ color: theme }}>
+      <div>
+        <h1 className="headerSubscribe" style={{ color: theme }}>
           Subscribe
         </h1>
 
-        <form className="form_subscribe" onSubmit={handleSubmit}>
+        <form className="formSubscribe" onSubmit={handleSubmit}>
           <input
             type="email"
-            className="input_subscribe"
+            className="inputSubscribe"
             name="email"
             placeholder="Email"
             onChange={(event) => setInputEmail(event.target.value)}
@@ -47,7 +45,7 @@ const Subscribe = () => {
             style={{ border: `2px solid ${theme}` }}
           />
           <input
-            className="input_subscribe"
+            className="inputSubscribe"
             type="text"
             name="userName"
             placeholder="Username"
@@ -57,7 +55,7 @@ const Subscribe = () => {
           />
 
           <input
-            className="input_subscribe"
+            className="inputSubscribe"
             type="password"
             name="password"
             placeholder="Password"
@@ -65,28 +63,37 @@ const Subscribe = () => {
             value={inputPassword}
             style={{ border: `2px solid ${theme}` }}
           />
-
-          <input
+          {/* ????? Input oder Button for subscripe ??? */}
+          {/* <input
             type="submit"
             value="Subscribe"
-            className="submit_subscribe"
+            className="inputSubmitSubscribe"
             style={{
               border: `2px solid transparent`,
               backgroundColor: theme,
             }}
-          />
+          /> */}
+          <button
+            className="submitButtonSubscribe"
+            style={{
+              border: `2px solid transparent`,
+              backgroundColor: theme,
+            }}
+          >
+            Submit
+          </button>
         </form>
-        <div className="nav_to_login" style={{ color: theme }}>
+        <div className="navToLoginSubscribe" style={{ color: theme }}>
           <p>
             Already a Caroleni Member?
             <button
-              onClick={handleClickLogin}
               style={{
                 color: theme,
                 border: "none",
                 backgroundColor: "white",
                 textDecoration: "underline",
               }}
+              onClick={handleClickLogin}
             >
               <strong> Login</strong>
             </button>

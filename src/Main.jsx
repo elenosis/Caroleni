@@ -13,6 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Modal from "./components/Modal";
 import Sidebar from "./components/Sidebar";
 import "./Main.css";
+
 import Footer from "./components/Footer";
 import ThemeContext from "./Contexts/ColorContext";
 
@@ -37,8 +38,8 @@ const events = [
   },
   {
     title: "Vacation",
-    start: new Date(2022, 10, 23),
-    end: new Date(2022, 10, 26),
+    start: new Date(2022, 12, 19),
+    end: new Date(2023, 1, 2),
   },
   {
     title: "Conference",
@@ -52,7 +53,7 @@ const Main = ({ city }) => {
     title: "",
     start: "",
     end: "",
-    description: "",
+    // description: "",
   });
   const [allEvents, setAllEvents] = useState(events);
   const [showModal, setShowModal] = useState(false);
@@ -66,10 +67,12 @@ const Main = ({ city }) => {
   }, []);
 
   const [theme] = useContext(ThemeContext);
+
   const handleCancel = () => {
     setShowModal(false);
     setZIndex(1);
   };
+
   function handleAddEvents() {
     setAllEvents([...allEvents, newEvent]);
     localStorage.setItem("allEvents", JSON.stringify(allEvents));
@@ -99,16 +102,15 @@ const Main = ({ city }) => {
               width: "70vw",
               margin: "50px",
               zIndex: `${zIndex}`,
+              // backgroundColor: theme,
             }}
           />
           <button
-            className="add_new_event"
-            onClick={handleClick}
+            className="addNewEventButtonMain"
             style={{
-              margin: "auto",
-              border: `2px solid transparent`,
               backgroundColor: theme,
             }}
+            onClick={handleClick}
           >
             Add new Event
           </button>
@@ -117,67 +119,56 @@ const Main = ({ city }) => {
           <Modal>
             <div>
               <input
-                className="inputEvent"
+                className="inputEventCalendarMain"
                 type="text"
                 placeholder="Add event title"
                 value={newEvent.title}
-                style={{ border: "none" }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, title: e.target.value })
                 }
               />
             </div>
             <DatePicker
-              className="datePicker"
+              className="datePickerCalendarMain"
               placeholderText="Start date"
-              // style={{ border: `2px solid ${theme}` }}
               selected={newEvent.start}
               onChange={(start) => setNewEvent({ ...newEvent, start })}
             />
             <DatePicker
-              className="datePicker"
+              className="datePickerCalendarMain"
               placeholderText="End date"
               selected={newEvent.end}
-              // style={{ border: `2px solid ${theme}` }}
               onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
-            <div>
-              <p>Description:</p>
-              {/* <textarea name="description" id="" cols="30" rows="10"></textarea> */}
+            {/* <div>
+              <p className="description">Description:</p>
               <input
-                className="inputEvent"
+                className="inputEventCalendarMain"
                 type="text"
                 rows="40"
                 cols="50"
                 name="comment"
                 placeholder="Add description"
                 values={newEvent.description}
-                style={{ border: `none` }}
                 onChange={(e) =>
                   setNewEvent({ ...newEvent, description: e.target.value })
                 }
               />
-            </div>
-            <div>
+            </div> */}
+            <div className="modalButtonMainPosition">
               <button
-                className="modal_buttons"
+                className="modalButtonMain"
                 style={{
-                  color: theme,
-                  border: `2px solid ${theme}`,
-                  borderBottomColor: theme,
-                  borderRightColor: theme,
+                  backgroundColor: theme,
                 }}
                 onClick={handleAddEvents}
               >
                 Add event
               </button>
               <button
-                className="modal_buttons"
+                className="modalButtonMain"
                 style={{
-                  color: theme,
-                  border: `2px solid ${theme}`,
-                  borderBottomColor: theme,
-                  borderRightColor: theme,
+                  backgroundColor: theme,
                 }}
                 onClick={handleCancel}
               >
